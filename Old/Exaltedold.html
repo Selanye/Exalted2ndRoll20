@@ -1,0 +1,2875 @@
+rolltemplate class=sheet-rolltemplate-joinbattle
+    div
+        img src=httpi.imgur.comSncEMzz.png 
+        h3Join Battle!h3
+        divWits ({{wits}}) +div
+        divAwareness ({{awareness}}) +div
+        divBonus Dice ({{bonus dice}}) +div
+        divBonus Successess ({{bonus successess}}) =div
+        {{roll}} Successes
+    div
+rolltemplate
+rolltemplate class=sheet-rolltemplate-joindebate
+    div
+        img src=httpi.imgur.comSncEMzz.png 
+        h3Join Debate!h3
+        divWits ({{wits}}) +div
+        divAwareness ({{awareness}}) +div
+        divBonus Dice ({{bonus dice}}) +div
+        divBonus Successess ({{bonus successess}}) =div
+        {{roll}} Successes
+    div
+rolltemplate
+rolltemplate class=sheet-rolltemplate-joinwar
+    div
+        img src=httpi.imgur.comSncEMzz.png 
+        h3Join War!h3
+        divWits ({{wits}}) +div
+        divWar ({{war}}) +div
+        divBonus Dice ({{bonus dice}}) +div
+        divBonus Successess ({{bonus successess}}) =div
+        {{roll}} Successes
+    div
+rolltemplate
+rolltemplate class=sheet-rolltemplate-attack
+    div
+        {{#name}}
+        h3 class=named{{name}} (Attack!)h3
+        {{name}}
+        {{^name}}
+        h3 class=unnamedAttack!h3
+        {{name}}
+        div
+            {{#attribute name}}
+            {{attribute name}}
+            {{attribute name}}
+            {{^attribute name}}
+            Attribute
+            {{attribute name}}
+            ({{attribute}}) +
+        div
+        div
+            {{#ability name}}
+            {{ability name}}
+            {{ability name}}
+            {{^ability name}}
+            Ability
+            {{ability name}}
+            ({{ability}}) +
+        div
+        div
+            {{#specialty name}}
+            {{specialty name}}
+            {{specialty name}}
+            {{^specialty name}}
+            Specialty
+            {{specialty name}}
+            ({{specialty}}) +
+        div
+        divAccuracy ({{accuracy}}) +div
+        divBonus Dice ({{bonus dice}}) +div
+        divBonus Successes ({{bonus successes}}) =div
+        {{roll}} Successes
+    div
+rolltemplate
+rolltemplate class=sheet-rolltemplate-damage
+    div
+        {{#name}}
+        h3 class=named{{name}} (Hit!)h3
+        {{name}}
+        {{^name}}
+        h3 class=unnamedHit!h3
+        {{name}}
+        divspan class=damage-type{{damage type}}span Damage ({{damage}}) +div
+        {{#attribute}}
+        div
+            {{#attribute name}}
+            {{attribute name}}
+            {{attribute name}}
+            {{^attribute name}}
+            Attribute
+            {{attribute name}}
+            ({{attribute}}) +
+        div
+        {{attribute}}
+        {{#ability}}
+        div
+            {{#ability name}}
+            {{ability name}}
+            {{ability name}}
+            {{^ability name}}
+            Ability
+            {{ability name}}
+            ({{ability}}) +
+        div
+        {{ability}}
+        divBonus Dice ({{bonus dice}}) +div
+        divBonus Successes ({{bonus successes}}) &ndash;div
+        divTarget Soak ({{target soak}}) =div
+        {{#rollTotal() pool 0}}
+        span class=minimum{{minimum roll}} Successesspan
+        {{rollTotal() pool 0}}
+        span class=regular{{roll}} Successesspan
+    div
+rolltemplate
+
+div class=bio sheet-3colrow
+    div class=sheet-col center
+        img src=httpi.imgur.comRgaO9Ft.gif class=banner 
+    div
+    div class=sheet-col
+        labelspanNamespan input type=text name=attr_character_name label
+        label
+            spanCastespan
+            select name=attr_Caste
+                option value=DawnSolar Dawnoption
+                option value=ZenithSolar Zenithoption
+                option value=TwilightSolar Twilightoption
+                option value=NightSolar Nightoption
+                option value=EclipseSolar Eclipseoption
+
+                option value=FullMoonLunar Full Moonoption
+                option value=ChangingMoonLunar Changing Moonoption
+                option value=NoMoonLunar No Moonoption
+
+                option value=JourneySidereal Journeyoption
+                option value=SerenitySidereal Serenityoption
+                option value=BattleSidereal Battleoption
+                option value=SecretSidereal Secretoption
+                option value=EndingSidereal Endingoption
+
+                option value=EarthDragon-Blooded Earthoption
+                option value=FireDragon-Blooded Fireoption
+                option value=WaterDragon-Blooded Wateroption
+                option value=AirDragon-Blooded Airoption
+            select
+        label
+    div
+    div class=sheet-col
+        labelspanConceptspan input type=text name=attr_Concept label
+        labelspanMotivationspan input type=text name=attr_Motivation label
+        labelspanAnimaspan input type=text name=attr_Anima label
+    div
+div
+
+input type=radio class=tab name=attr_tab value=solar checked=checked span title=Solarspan
+input type=radio class=tab name=attr_tab value=lunar span title=Lunarspan
+input type=radio class=tab name=attr_tab value=sidereal span title=Siderealspan
+input type=radio class=tab name=attr_tab value=abyssal span title=Abyssalspan
+
+div class=tab-content abyssal-tab
+    h1 class=separatorspanAttributesspanh1
+    
+    div class=sheet-3colrow
+        div class=sheet-col
+            div class=attribute
+                input type=checkbox name=attr_AStrengthFavored value=1spanspan
+                span class=attributeStrengthspan
+                div class=dots
+                    input type=radio name=attr_AStrength value=1 checked=checked spanspan
+                    input type=radio name=attr_AStrength value=2 spanspan
+                    input type=radio name=attr_AStrength value=3 spanspan
+                    input type=radio name=attr_AStrength value=4 spanspan
+                    input type=radio name=attr_AStrength value=5 spanspan
+                div
+            div
+            div class=attribute
+                input type=checkbox name=attr_ADexterityFavored value=1spanspan
+                span class=attributeDexterityspan
+                div class=dots
+                    input type=radio name=attr_ADexterity value=1 checked=checked spanspan
+                    input type=radio name=attr_ADexterity value=2 spanspan
+                    input type=radio name=attr_ADexterity value=3 spanspan
+                    input type=radio name=attr_ADexterity value=4 spanspan
+                    input type=radio name=attr_ADexterity value=5 spanspan
+                div
+            div
+            div class=attribute
+                input type=checkbox name=attr_AStaminaFavored value=1spanspan
+                span class=attributeStaminaspan
+                div class=dots
+                    input type=radio name=attr_AStamina value=1 checked=checked spanspan
+                    input type=radio name=attr_AStamina value=2 spanspan
+                    input type=radio name=attr_AStamina value=3 spanspan
+                    input type=radio name=attr_AStamina value=4 spanspan
+                    input type=radio name=attr_AStamina value=5 spanspan
+                div
+            div
+        div
+        
+        div class=sheet-col
+            div class=attribute
+                input type=checkbox name=attr_ACharismaFavored value=1spanspan
+                span class=attributeCharismaspan
+                div class=dots
+                    input type=radio name=attr_ACharisma value=1 checked=checked spanspan
+                    input type=radio name=attr_ACharisma value=2 spanspan
+                    input type=radio name=attr_ACharisma value=3 spanspan
+                    input type=radio name=attr_ACharisma value=4 spanspan
+                    input type=radio name=attr_ACharisma value=5 spanspan
+                div
+            div
+            div class=attribute
+                input type=checkbox name=attr_AManipulationFavored value=1spanspan
+                span class=attributeManipulationspan
+                div class=dots
+                    input type=radio name=attr_AManipulation value=1 checked=checked spanspan
+                    input type=radio name=attr_AManipulation value=2 spanspan
+                    input type=radio name=attr_AManipulation value=3 spanspan
+                    input type=radio name=attr_AManipulation value=4 spanspan
+                    input type=radio name=attr_AManipulation value=5 spanspan
+                div
+            div
+            div class=attribute
+                input type=checkbox name=attr_AApperanceFavored value=1spanspan
+                span class=attributeAppearancespan
+                div class=dots
+                    input type=radio name=attr_AAppearance value=1 checked=checked spanspan
+                    input type=radio name=attr_AAppearance value=2 spanspan
+                    input type=radio name=attr_AAppearance value=3 spanspan
+                    input type=radio name=attr_AAppearance value=4 spanspan
+                    input type=radio name=attr_AAppearance value=5 spanspan
+                div
+            div
+        div
+        
+        div class=sheet-col
+            div class=attribute
+                input type=checkbox name=attr_AIntelligenceFavored value=1spanspan
+                span class=attributeIntelligencespan
+                div class=dots
+                    input type=radio name=attr_AIntelligence value=1 checked=checked spanspan
+                    input type=radio name=attr_AIntelligence value=2 spanspan
+                    input type=radio name=attr_AIntelligence value=3 spanspan
+                    input type=radio name=attr_AIntelligence value=4 spanspan
+                    input type=radio name=attr_AIntelligence value=5 spanspan
+                div
+            div
+            div class=attribute
+                input type=checkbox name=attr_AWitsFavored value=1spanspan
+                span class=attributeWitsspan
+                div class=dots
+                    input type=radio name=attr_AWits value=1 checked=checked spanspan
+                    input type=radio name=attr_AWits value=2 spanspan
+                    input type=radio name=attr_AWits value=3 spanspan
+                    input type=radio name=attr_AWits value=4 spanspan
+                    input type=radio name=attr_AWits value=5 spanspan
+                div
+            div
+            div class=attribute
+                input type=checkbox name=attr_APerceptionFavored value=1spanspan
+                span class=attributePerceptionspan
+                div class=dots
+                    input type=radio name=attr_APerception value=1 checked=checked spanspan
+                    input type=radio name=attr_APerception value=2 spanspan
+                    input type=radio name=attr_APerception value=3 spanspan
+                    input type=radio name=attr_APerception value=4 spanspan
+                    input type=radio name=attr_APerception value=5 spanspan
+                div
+            div
+        div
+    div
+    
+    h1 class=separatorspanAbilitiesspanh1
+    
+    div class=sheet-3colrow
+        div class=sheet-col
+            h3 class=abilityDuskh3
+            div class=ability
+                input type=checkbox name=attr_AArcheryFavored value=1 spanspan
+                span class=abilityArcheryspan
+                div class=dots
+                    input type=checkbox name=attr_AArchery_max value=1 spanspan
+                    input type=radio name=attr_AArchery value=0 checked=checked 
+                    input type=radio name=attr_AArchery value=1 spanspan
+                    input type=radio name=attr_AArchery value=2 spanspan
+                    input type=radio name=attr_AArchery value=3 spanspan
+                    input type=radio name=attr_AArchery value=4 spanspan
+                    input type=radio name=attr_AArchery value=5 spanspan
+                div
+            div
+            div class=ability
+                input type=checkbox name=attr_AMartialArtsFavored value=1 spanspan
+                span class=abilityMartial Artsspan
+                div class=dots
+                    input type=checkbox name=attr_AMartialArts_max value=1 spanspan
+                    input type=radio name=attr_AMartialArts value=0 checked=checked 
+                    input type=radio name=attr_AMartialArts value=1 spanspan
+                    input type=radio name=attr_AMartialArts value=2 spanspan
+                    input type=radio name=attr_AMartialArts value=3 spanspan
+                    input type=radio name=attr_AMartialArts value=4 spanspan
+                    input type=radio name=attr_AMartialArts value=5 spanspan
+                div
+            div
+            div class=ability
+                input type=checkbox name=attr_AMeleeFavored value=1 spanspan
+                span class=abilityMeleespan
+                div class=dots
+                    input type=checkbox name=attr_AMelee_max value=1 spanspan
+                    input type=radio name=attr_AMelee value=0 checked=checked 
+                    input type=radio name=attr_AMelee value=1 spanspan
+                    input type=radio name=attr_AMelee value=2 spanspan
+                    input type=radio name=attr_AMelee value=3 spanspan
+                    input type=radio name=attr_AMelee value=4 spanspan
+                    input type=radio name=attr_AMelee value=5 spanspan
+                div
+            div
+            div class=ability
+                input type=checkbox name=attr_AThrownFavored value=1 spanspan
+                span class=abilityThrownspan
+                div class=dots
+                    input type=checkbox name=attr_AThrown_max value=1 spanspan
+                    input type=radio name=attr_AThrown value=0 checked=checked 
+                    input type=radio name=attr_AThrown value=1 spanspan
+                    input type=radio name=attr_AThrown value=2 spanspan
+                    input type=radio name=attr_AThrown value=3 spanspan
+                    input type=radio name=attr_AThrown value=4 spanspan
+                    input type=radio name=attr_AThrown value=5 spanspan
+                div
+            div
+            div class=ability
+                input type=checkbox name=attr_AWarFavored value=1 spanspan
+                span class=abilityWarspan
+                div class=dots
+                    input type=checkbox name=attr_AWar_max value=1 spanspan
+                    input type=radio name=attr_AWar value=0 checked=checked 
+                    input type=radio name=attr_AWar value=1 spanspan
+                    input type=radio name=attr_AWar value=2 spanspan
+                    input type=radio name=attr_AWar value=3 spanspan
+                    input type=radio name=attr_AWar value=4 spanspan
+                    input type=radio name=attr_AWar value=5 spanspan
+                div
+            div
+        div
+        
+        div class=sheet-col
+            h3 class=abilityMidnighth3
+            div class=ability
+                input type=checkbox name=attr_AIntegrityFavored value=1 spanspan
+                span class=abilityIntegrityspan
+                div class=dots
+                    input type=checkbox name=attr_AIntegrity_max value=1 spanspan
+                    input type=radio name=attr_AIntegrity value=0 checked=checked 
+                    input type=radio name=attr_AIntegrity value=1 spanspan
+                    input type=radio name=attr_AIntegrity value=2 spanspan
+                    input type=radio name=attr_AIntegrity value=3 spanspan
+                    input type=radio name=attr_AIntegrity value=4 spanspan
+                    input type=radio name=attr_AIntegrity value=5 spanspan
+                div
+            div
+            div class=ability
+                input type=checkbox name=attr_APerformanceFavored value=1 spanspan
+                span class=abilityPerformancespan
+                div class=dots
+                    input type=checkbox name=attr_APerformance_max value=1 spanspan
+                    input type=radio name=attr_APerformance value=0 checked=checked 
+                    input type=radio name=attr_APerformance value=1 spanspan
+                    input type=radio name=attr_APerformance value=2 spanspan
+                    input type=radio name=attr_APerformance value=3 spanspan
+                    input type=radio name=attr_APerformance value=4 spanspan
+                    input type=radio name=attr_APerformance value=5 spanspan
+                div
+            div
+            div class=ability
+                input type=checkbox name=attr_APresenceFavored value=1 spanspan
+                span class=abilityPresencespan
+                div class=dots
+                    input type=checkbox name=attr_APresence_max value=1 spanspan
+                    input type=radio name=attr_APresence value=0 checked=checked 
+                    input type=radio name=attr_APresence value=1 spanspan
+                    input type=radio name=attr_APresence value=2 spanspan
+                    input type=radio name=attr_APresence value=3 spanspan
+                    input type=radio name=attr_APresence value=4 spanspan
+                    input type=radio name=attr_APresence value=5 spanspan
+                div
+            div
+            div class=ability
+                input type=checkbox name=attr_AResistanceFavored value=1 spanspan
+                span class=abilityResistancespan
+                div class=dots
+                    input type=checkbox name=attr_AResistance_max value=1 spanspan
+                    input type=radio name=attr_AResistance value=0 checked=checked 
+                    input type=radio name=attr_AResistance value=1 spanspan
+                    input type=radio name=attr_AResistance value=2 spanspan
+                    input type=radio name=attr_AResistance value=3 spanspan
+                    input type=radio name=attr_AResistance value=4 spanspan
+                    input type=radio name=attr_AResistance value=5 spanspan
+                div
+            div
+            div class=ability
+                input type=checkbox name=attr_ASurvivalFavored value=1 spanspan
+                span class=abilitySurvivalspan
+                div class=dots
+                    input type=checkbox name=attr_ASurvival_max value=1 spanspan
+                    input type=radio name=attr_ASurvival value=0 checked=checked 
+                    input type=radio name=attr_ASurvival value=1 spanspan
+                    input type=radio name=attr_ASurvival value=2 spanspan
+                    input type=radio name=attr_ASurvival value=3 spanspan
+                    input type=radio name=attr_ASurvival value=4 spanspan
+                    input type=radio name=attr_ASurvival value=5 spanspan
+                div
+            div
+        div
+        
+        div class=sheet-col
+            h3 class=abilityDaybreakh3
+            div class=ability craft-types
+                input type=checkbox name=attr_ACraftFavored value=1 spanspan
+                span class=abilityCraftspan
+                ul class=craft-types
+                    li title=[Mundane] Making small, decorative, or high-precision items
+                        Air
+                        div class=dots
+                            input type=checkbox name=attr_ACraftAir_max value=1 spanspan
+                            input type=radio name=attr_ACraftAir value=0 checked=checked 
+                            input type=radio name=attr_ACraftAir value=1 spanspan
+                            input type=radio name=attr_ACraftAir value=2 spanspan
+                            input type=radio name=attr_ACraftAir value=3 spanspan
+                            input type=radio name=attr_ACraftAir value=4 spanspan
+                            input type=radio name=attr_ACraftAir value=5 spanspan
+                        div
+                    li
+                    li title=[Mundane] Creating buildings and large objects with stone or earth
+                        Earth
+                        div class=dots
+                            input type=checkbox name=attr_ACraftEarth_max value=1 spanspan
+                            input type=radio name=attr_ACraftEarth value=0 checked=checked 
+                            input type=radio name=attr_ACraftEarth value=1 spanspan
+                            input type=radio name=attr_ACraftEarth value=2 spanspan
+                            input type=radio name=attr_ACraftEarth value=3 spanspan
+                            input type=radio name=attr_ACraftEarth value=4 spanspan
+                            input type=radio name=attr_ACraftEarth value=5 spanspan
+                        div
+                    li
+                    li title=[Mundane] Forging and casting large metal objects and creating objects using fire
+                        Fire
+                        div class=dots
+                            input type=checkbox name=attr_ACraftFire_max value=1 spanspan
+                            input type=radio name=attr_ACraftFire value=0 checked=checked 
+                            input type=radio name=attr_ACraftFire value=1 spanspan
+                            input type=radio name=attr_ACraftFire value=2 spanspan
+                            input type=radio name=attr_ACraftFire value=3 spanspan
+                            input type=radio name=attr_ACraftFire value=4 spanspan
+                            input type=radio name=attr_ACraftFire value=5 spanspan
+                        div
+                    li
+                    li title=[Mundane] Boiling and cooking plants, chemicals, and animal materials
+                        Water
+                        div class=dots
+                            input type=checkbox name=attr_ACraftWater_max value=1 spanspan
+                            input type=radio name=attr_ACraftWater value=0 checked=checked 
+                            input type=radio name=attr_ACraftWater value=1 spanspan
+                            input type=radio name=attr_ACraftWater value=2 spanspan
+                            input type=radio name=attr_ACraftWater value=3 spanspan
+                            input type=radio name=attr_ACraftWater value=4 spanspan
+                            input type=radio name=attr_ACraftWater value=5 spanspan
+                        div
+                    li
+                    li title=[Mundane] Carving, weaving, and manipulating natural elements
+                        Wood
+                        div class=dots
+                            input type=checkbox name=attr_ACraftWood_max value=1 spanspan
+                            input type=radio name=attr_ACraftWood value=0 checked=checked 
+                            input type=radio name=attr_ACraftWood value=1 spanspan
+                            input type=radio name=attr_ACraftWood value=2 spanspan
+                            input type=radio name=attr_ACraftWood value=3 spanspan
+                            input type=radio name=attr_ACraftWood value=4 spanspan
+                            input type=radio name=attr_ACraftWood value=5 spanspan
+                        div
+                    li
+                    li title=[Esoteric, Sidereal] Manipulate fate for certain Astrologies and Charms
+                        Fate
+                        div class=dots
+                            input type=checkbox name=attr_ACraftFate_max value=1 spanspan
+                            input type=radio name=attr_ACraftFate value=0 checked=checked 
+                            input type=radio name=attr_ACraftFate value=1 spanspan
+                            input type=radio name=attr_ACraftFate value=2 spanspan
+                            input type=radio name=attr_ACraftFate value=3 spanspan
+                            input type=radio name=attr_ACraftFate value=4 spanspan
+                            input type=radio name=attr_ACraftFate value=5 spanspan
+                        div
+                    li
+                    li title=[Esoteric, First Age] Create or modify life
+                        Genesis
+                        div class=dots
+                            input type=checkbox name=attr_ACraftGenesis_max value=1 spanspan
+                            input type=radio name=attr_ACraftGenesis value=0 checked=checked 
+                            input type=radio name=attr_ACraftGenesis value=1 spanspan
+                            input type=radio name=attr_ACraftGenesis value=2 spanspan
+                            input type=radio name=attr_ACraftGenesis value=3 spanspan
+                            input type=radio name=attr_ACraftGenesis value=4 spanspan
+                            input type=radio name=attr_ACraftGenesis value=5 spanspan
+                        div
+                    li
+                    li title=[Esoteric, Raksha] Manipulate the physical manifestation of shaping effects, from Essence to dreams
+                        Glamour
+                        div class=dots
+                            input type=checkbox name=attr_ACraftGlamour_max value=1 spanspan
+                            input type=radio name=attr_ACraftGlamour value=0 checked=checked 
+                            input type=radio name=attr_ACraftGlamour value=1 spanspan
+                            input type=radio name=attr_ACraftGlamour value=2 spanspan
+                            input type=radio name=attr_ACraftGlamour value=3 spanspan
+                            input type=radio name=attr_ACraftGlamour value=4 spanspan
+                            input type=radio name=attr_ACraftGlamour value=5 spanspan
+                        div
+                    li
+                    li title=[Esoteric, First Age] Creation, enchantment, and maintenance of First Age devices
+                        Magitech
+                        div class=dots
+                            input type=checkbox name=attr_ACraftMagitech_max value=1 spanspan
+                            input type=radio name=attr_ACraftMagitech value=0 checked=checked 
+                            input type=radio name=attr_ACraftMagitech value=1 spanspan
+                            input type=radio name=attr_ACraftMagitech value=2 spanspan
+                            input type=radio name=attr_ACraftMagitech value=3 spanspan
+                            input type=radio name=attr_ACraftMagitech value=4 spanspan
+                            input type=radio name=attr_ACraftMagitech value=5 spanspan
+                        div
+                    li
+					 li
+                    li title=[, ] 
+                        Necrotech
+                        div class=dots
+                            input type=checkbox name=attr_ACraftNecrotech_max value=1 spanspan
+                            input type=radio name=attr_ACraftNecrotech value=0 checked=checked 
+                            input type=radio name=attr_ACraftNecrotech value=1 spanspan
+                            input type=radio name=attr_ACraftNecrotech value=2 spanspan
+                            input type=radio name=attr_ACraftNecrotech value=3 spanspan
+                            input type=radio name=attr_ACraftNecrotech value=4 spanspan
+                            input type=radio name=attr_ACraftNecrotech value=5 spanspan
+                        div
+                    li
+                    li title=[Esoteric, Infernal] Use Malfean Vitriol to catalyze a mundane Craft
+                        Vitriol
+                        div class=dots
+                            input type=checkbox name=attr_ACraftVitriol_max value=1 spanspan
+                            input type=radio name=attr_ACraftVitriol value=0 checked=checked 
+                            input type=radio name=attr_ACraftVitriol value=1 spanspan
+                            input type=radio name=attr_ACraftVitriol value=2 spanspan
+                            input type=radio name=attr_ACraftVitriol value=3 spanspan
+                            input type=radio name=attr_ACraftVitriol value=4 spanspan
+                            input type=radio name=attr_ACraftVitriol value=5 spanspan
+                        div
+                    li
+                ul
+                div class=right style=padding-right 20px; font-style italicHover to select craftsdiv
+            div
+            div class=ability
+                input type=checkbox name=attr_AInvestigationFavored value=1 spanspan
+                span class=abilityInvestigationspan
+                div class=dots
+                    input type=checkbox name=attr_AInvestigation_max value=1 spanspan
+                    input type=radio name=attr_AInvestigation value=0 checked=checked 
+                    input type=radio name=attr_AInvestigation value=1 spanspan
+                    input type=radio name=attr_AInvestigation value=2 spanspan
+                    input type=radio name=attr_AInvestigation value=3 spanspan
+                    input type=radio name=attr_AInvestigation value=4 spanspan
+                    input type=radio name=attr_AInvestigation value=5 spanspan
+                div
+            div
+            div class=ability
+                input type=checkbox name=attr_ALoreFavored value=1 spanspan
+                span class=abilityLorespan
+                div class=dots
+                    input type=checkbox name=attr_ALore_max value=1 spanspan
+                    input type=radio name=attr_ALore value=0 checked=checked 
+                    input type=radio name=attr_ALore value=1 spanspan
+                    input type=radio name=attr_ALore value=2 spanspan
+                    input type=radio name=attr_ALore value=3 spanspan
+                    input type=radio name=attr_ALore value=4 spanspan
+                    input type=radio name=attr_ALore value=5 spanspan
+                div
+            div
+            div class=ability
+                input type=checkbox name=attr_AMedicineFavored value=1 spanspan
+                span class=abilityMedicinespan
+                div class=dots
+                    input type=checkbox name=attr_AMedicine_max value=1 spanspan
+                    input type=radio name=attr_AMedicine value=0 checked=checked 
+                    input type=radio name=attr_AMedicine value=1 spanspan
+                    input type=radio name=attr_AMedicine value=2 spanspan
+                    input type=radio name=attr_AMedicine value=3 spanspan
+                    input type=radio name=attr_AMedicine value=4 spanspan
+                    input type=radio name=attr_AMedicine value=5 spanspan
+                div
+            div
+            div class=ability
+                input type=checkbox name=attr_AOccultFavored value=1 spanspan
+                span class=abilityOccultspan
+                div class=dots
+                    input type=checkbox name=attr_AOccult_max value=1 spanspan
+                    input type=radio name=attr_AOccult value=0 checked=checked 
+                    input type=radio name=attr_AOccult value=1 spanspan
+                    input type=radio name=attr_AOccult value=2 spanspan
+                    input type=radio name=attr_AOccult value=3 spanspan
+                    input type=radio name=attr_AOccult value=4 spanspan
+                    input type=radio name=attr_AOccult value=5 spanspan
+                div
+            div
+        div
+    div
+    div class=sheet-3colrow
+        div class=sheet-col
+            h3 class=abilityDayh3
+            div class=ability
+                input type=checkbox name=attr_AAthleticsFavored value=1 spanspan
+                span class=abilityAthleticsspan
+                div class=dots
+                    input type=checkbox name=attr_AAthletics_max value=1 spanspan
+                    input type=radio name=attr_AAthletics value=0 checked=checked 
+                    input type=radio name=attr_AAthletics value=1 spanspan
+                    input type=radio name=attr_AAthletics value=2 spanspan
+                    input type=radio name=attr_AAthletics value=3 spanspan
+                    input type=radio name=attr_AAthletics value=4 spanspan
+                    input type=radio name=attr_AAthletics value=5 spanspan
+                div
+            div
+            div class=ability
+                input type=checkbox name=attr_AAwarenessFavored value=1 spanspan
+                span class=abilityAwarenessspan
+                div class=dots
+                    input type=checkbox name=attr_AAwareness_max value=1 spanspan
+                    input type=radio name=attr_AAwareness value=0 checked=checked 
+                    input type=radio name=attr_AAwareness value=1 spanspan
+                    input type=radio name=attr_AAwareness value=2 spanspan
+                    input type=radio name=attr_AAwareness value=3 spanspan
+                    input type=radio name=attr_AAwareness value=4 spanspan
+                    input type=radio name=attr_AAwareness value=5 spanspan
+                div
+            div
+            div class=ability
+                input type=checkbox name=attr_ADodgeFavored value=1 spanspan
+                span class=abilityDodgespan
+                div class=dots
+                    input type=checkbox name=attr_ADodge_max value=1 spanspan
+                    input type=radio name=attr_ADodge value=0 checked=checked 
+                    input type=radio name=attr_ADodge value=1 spanspan
+                    input type=radio name=attr_ADodge value=2 spanspan
+                    input type=radio name=attr_ADodge value=3 spanspan
+                    input type=radio name=attr_ADodge value=4 spanspan
+                    input type=radio name=attr_ADodge value=5 spanspan
+                div
+            div
+            div class=ability
+                input type=checkbox name=attr_ALarcenyFavored value=1 spanspan
+                span class=abilityLarcenyspan
+                div class=dots
+                    input type=checkbox name=attr_ALarceny_max value=1 spanspan
+                    input type=radio name=attr_ALarceny value=0 checked=checked 
+                    input type=radio name=attr_ALarceny value=1 spanspan
+                    input type=radio name=attr_ALarceny value=2 spanspan
+                    input type=radio name=attr_ALarceny value=3 spanspan
+                    input type=radio name=attr_ALarceny value=4 spanspan
+                    input type=radio name=attr_ALarceny value=5 spanspan
+                div
+            div
+            div class=ability
+                input type=checkbox name=attr_AStealthFavored value=1 spanspan
+                span class=abilityStealthspan
+                div class=dots
+                    input type=checkbox name=attr_AStealth_max value=1 spanspan
+                    input type=radio name=attr_AStealth value=0 checked=checked 
+                    input type=radio name=attr_AStealth value=1 spanspan
+                    input type=radio name=attr_AStealth value=2 spanspan
+                    input type=radio name=attr_AStealth value=3 spanspan
+                    input type=radio name=attr_AStealth value=4 spanspan
+                    input type=radio name=attr_AStealth value=5 spanspan
+                div
+            div
+        div
+        
+        div class=sheet-col
+            h3 class=abilityMoonshadowh3
+            div class=ability
+                input type=checkbox name=attr_ABureaucracyFavored value=1 spanspan
+                span class=abilityBureaucracyspan
+                div class=dots
+                    input type=checkbox name=attr_ABureaucracy_max value=1 spanspan
+                    input type=radio name=attr_ABureaucracy value=0 checked=checked 
+                    input type=radio name=attr_ABureaucracy value=1 spanspan
+                    input type=radio name=attr_ABureaucracy value=2 spanspan
+                    input type=radio name=attr_ABureaucracy value=3 spanspan
+                    input type=radio name=attr_ABureaucracy value=4 spanspan
+                    input type=radio name=attr_ABureaucracy value=5 spanspan
+                div
+            div
+            div class=ability
+                input type=checkbox name=attr_ALinguisticsFavored value=1 spanspan
+                span class=abilityLinguisticsspan
+                div class=dots
+                    input type=checkbox name=attr_ALinguistics_max value=1 spanspan
+                    input type=radio name=attr_ALinguistics value=0 checked=checked 
+                    input type=radio name=attr_ALinguistics value=1 spanspan
+                    input type=radio name=attr_ALinguistics value=2 spanspan
+                    input type=radio name=attr_ALinguistics value=3 spanspan
+                    input type=radio name=attr_ALinguistics value=4 spanspan
+                    input type=radio name=attr_ALinguistics value=5 spanspan
+                div
+            div
+            div class=ability
+                input type=checkbox name=attr_ARideFavored value=1 spanspan
+                span class=abilityRidespan
+                div class=dots
+                    input type=checkbox name=attr_ARide_max value=1 spanspan
+                    input type=radio name=attr_ARide value=0 checked=checked 
+                    input type=radio name=attr_ARide value=1 spanspan
+                    input type=radio name=attr_ARide value=2 spanspan
+                    input type=radio name=attr_ARide value=3 spanspan
+                    input type=radio name=attr_ARide value=4 spanspan
+                    input type=radio name=attr_ARide value=5 spanspan
+                div
+            div
+            div class=ability
+                input type=checkbox name=attr_ASailFavored value=1 spanspan
+                span class=abilitySailspan
+                div class=dots
+                    input type=checkbox name=attr_ASail_max value=1 spanspan
+                    input type=radio name=attr_ASail value=0 checked=checked 
+                    input type=radio name=attr_ASail value=1 spanspan
+                    input type=radio name=attr_ASail value=2 spanspan
+                    input type=radio name=attr_ASail value=3 spanspan
+                    input type=radio name=attr_ASail value=4 spanspan
+                    input type=radio name=attr_ASail value=5 spanspan
+                div
+            div
+            div class=ability
+                input type=checkbox name=attr_ASocializeFavored value=1 spanspan
+                span class=abilitySocializespan
+                div class=dots
+                    input type=checkbox name=attr_ASocialize_max value=1 spanspan
+                    input type=radio name=attr_ASocialize value=0 checked=checked 
+                    input type=radio name=attr_ASocialize value=1 spanspan
+                    input type=radio name=attr_ASocialize value=2 spanspan
+                    input type=radio name=attr_ASocialize value=3 spanspan
+                    input type=radio name=attr_ASocialize value=4 spanspan
+                    input type=radio name=attr_ASocialize value=5 spanspan
+                div
+            div
+        div
+        
+        div class=sheet-col!-- Specialties are on a different page --div
+    div
+    
+ 
+    
+    div class=sheet-3colrow
+        div class=sheet-col
+            h1 class=separatorspanAnimaspanh1
+            textarea name=attr_AAnimaLong class=four-linestextarea
+            h1 class=separatorspanResonancespanh1
+            div class=dots center
+                input type=checkbox name=attr_ALimit_Zero spanspan
+                input type=radio name=attr_ALimit value=0 checked=checked 
+                input type=radio name=attr_ALimit value=1 spanspan
+                input type=radio name=attr_ALimit value=2 spanspan
+                input type=radio name=attr_ALimit value=3 spanspan
+                input type=radio name=attr_ALimit value=4 spanspan
+                input type=radio name=attr_ALimit value=5 spanspan
+                input type=radio name=attr_ALimit value=6 spanspan
+                input type=radio name=attr_ALimit value=7 spanspan
+                input type=radio name=attr_ALimit value=8 spanspan
+                input type=radio name=attr_ALimit value=9 spanspan
+                input type=radio name=attr_ALimit value=10 spanspan
+            div
+            h1 class=separatorspanFlawed Virtuespanh1
+            textarea name=attr_AVirtueFlaw class=three-linestextarea
+        div
+        div class=sheet-col
+            
+            div class=sheet-2colrow sheet-sub2colrow
+                div class=sheet-col
+                    h1 class=separatorspanWillpowerspanh1
+                    div class=dots center
+                        input type=radio name=attr_AWillpower value=1 spanspan
+                        input type=radio name=attr_AWillpower value=2 spanspan
+                        input type=radio name=attr_AWillpower value=3 spanspan
+                        input type=radio name=attr_AWillpower value=4 spanspan
+                        input type=radio name=attr_AWillpower value=5 checked=checked spanspan
+                        input type=radio name=attr_AWillpower value=6 spanspan
+                        input type=radio name=attr_AWillpower value=7 spanspan
+                        input type=radio name=attr_AWillpower value=8 spanspan
+                        input type=radio name=attr_AWillpower value=9 spanspan
+                        input type=radio name=attr_AWillpower value=10 spanspan
+                    div
+                    div class=will center
+                        input type=checkbox name=attr_ATempWillpower1 value=1 spanspan
+                        input type=checkbox name=attr_ATempWillpower2 value=1 spanspan
+                        input type=checkbox name=attr_ATempWillpower3 value=1 spanspan
+                        input type=checkbox name=attr_ATempWillpower4 value=1 spanspan
+                        input type=checkbox name=attr_ATempWillpower5 value=1 spanspan
+                        input type=checkbox name=attr_ATempWillpower6 value=1 spanspan
+                        input type=checkbox name=attr_ATempWillpower7 value=1 spanspan
+                        input type=checkbox name=attr_ATempWillpower8 value=1 spanspan
+                        input type=checkbox name=attr_ATempWillpower9 value=1 spanspan
+                        input type=checkbox name=attr_ATempWillpower10 value=1 spanspan
+                    div
+                    h1 class=separatorspanHealthspanh1
+                    h3 class=centerSoakh3
+                    label class=soakB input type=number name=attr_ABashingSoak value=0 min=0 label
+                    label class=soakL input type=number name=attr_ALethalSoak value=0 min=0 label
+                    label class=soakA input type=number name=attr_AAggravatedSoak value=0 min=0 label
+                    h3 class=centerDodge Defenseh3
+                    input type=hidden name=attr_ADodgeDVInitial disabled=true value=ceil((@{Dexterity}-abs(@{ArmorMobility})+@{Dodge}(1-@{Dodgemax})+@{Essence})2) 
+                    label class=dvDV input type=number name=attr_ADodgeDVlabel
+                    label class=dvMDV input type=number name=attr_ADodgeMDVlabel
+                    div style=width 80%; margin-left 10%
+                        hr 
+                        fieldset class=repeating_health
+                            div class=health
+                                select name=attr_AWoundPenalty class=health-label
+                                    option value=-0-0option
+                                    option value=-1-1option
+                                    option value=-2-2option
+                                    option value=-4-4option
+                                select
+                                select name=attr_ADamage class=health-value
+                                    option value=none☐ (no damage)option
+                                    option value=bashing&nbsp;∕ (bashing damage)option
+                                    option value=lethal☓ (lethal damage)option
+                                    option value=aggravated✱ (aggravated damage)option
+                                select
+                            div
+                        fieldset
+                        div class=health
+                            Incapacitated
+                            select name=attr_AIncapacitatedDamage class=health-value
+                                option value=none☐ (no damage)option
+                                option value=bashing&nbsp;∕ (bashing damage)option
+                                option value=lethal☓ (lethal damage)option
+                                option value=aggravated✱ (aggravated damage)option
+                            select
+                        div
+                    div
+                div
+                div class=sheet-col
+                    h1 class=separatorspanVirtuesspanh1
+                    div class=virtue
+                        h4Compassionh4
+                        div class=dots
+                            input type=radio name=attr_ACompassion value=1 checked=checked spanspan
+                            input type=radio name=attr_ACompassion value=2 spanspan
+                            input type=radio name=attr_ACompassion value=3 spanspan
+                            input type=radio name=attr_ACompassion value=4 spanspan
+                            input type=radio name=attr_ACompassion value=5 spanspan
+                        div
+                        div class=will
+                            input type=checkbox name=attr_ATempCompassion1 value=1 spanspan
+                            input type=checkbox name=attr_ATempCompassion2 value=1 spanspan
+                            input type=checkbox name=attr_ATempCompassion3 value=1 spanspan
+                            input type=checkbox name=attr_ATempCompassion4 value=1 spanspan
+                            input type=checkbox name=attr_ATempCompassion5 value=1 spanspan
+                        div
+                    div
+                    div class=virtue
+                        h4Temperanceh4
+                        div class=dots
+                            input type=radio name=attr_ATemperance value=1 checked=checked spanspan
+                            input type=radio name=attr_ATemperance value=2 spanspan
+                            input type=radio name=attr_ATemperance value=3 spanspan
+                            input type=radio name=attr_ATemperance value=4 spanspan
+                            input type=radio name=attr_ATemperance value=5 spanspan
+                        div
+                        div class=will
+                            input type=checkbox name=attr_ATempTemperance1 value=1 spanspan
+                            input type=checkbox name=attr_ATempTemperance2 value=1 spanspan
+                            input type=checkbox name=attr_ATempTemperance3 value=1 spanspan
+                            input type=checkbox name=attr_ATempTemperance4 value=1 spanspan
+                            input type=checkbox name=attr_ATempTemperance5 value=1 spanspan
+                        div
+                    div
+                    div class=virtue
+                        h4Convictionh4
+                        div class=dots
+                            input type=radio name=attr_AConviction value=1 checked=checked spanspan
+                            input type=radio name=attr_AConviction value=2 spanspan
+                            input type=radio name=attr_AConviction value=3 spanspan
+                            input type=radio name=attr_AConviction value=4 spanspan
+                            input type=radio name=attr_AConviction value=5 spanspan
+                        div
+                        div class=will
+                            input type=checkbox name=attr_ATempConviction1 value=1 spanspan
+                            input type=checkbox name=attr_ATempConviction2 value=1 spanspan
+                            input type=checkbox name=attr_ATempConviction3 value=1 spanspan
+                            input type=checkbox name=attr_ATempConviction4 value=1 spanspan
+                            input type=checkbox name=attr_ATempConviction5 value=1 spanspan
+                        div
+                    div
+                    div class=virtue
+                        h4Valorh4
+                        div class=dots
+                            input type=radio name=attr_AValor value=1 checked=checked spanspan
+                            input type=radio name=attr_AValor value=2 spanspan
+                            input type=radio name=attr_AValor value=3 spanspan
+                            input type=radio name=attr_AValor value=4 spanspan
+                            input type=radio name=attr_AValor value=5 spanspan
+                        div
+                        div class=will
+                            input type=checkbox name=attr_ATempValor1 value=1 spanspan
+                            input type=checkbox name=attr_ATempValor2 value=1 spanspan
+                            input type=checkbox name=attr_ATempValor3 value=1 spanspan
+                            input type=checkbox name=attr_ATempValor4 value=1 spanspan
+                            input type=checkbox name=attr_ATempValor5 value=1 spanspan
+                        div
+                    div
+                    h1 class=separatorspanEssencespanh1
+                    div class=dots
+                        input type=radio name=attr_AEssence value=1 checked=checked spanspan
+                        input type=radio name=attr_AEssence value=2 spanspan
+                        input type=radio name=attr_AEssence value=3 spanspan
+                        input type=radio name=attr_AEssence value=4 spanspan
+                        input type=radio name=attr_AEssence value=5 spanspan
+                        input type=radio name=attr_AEssence value=6 spanspan
+                        input type=radio name=attr_AEssence value=7 spanspan
+                        input type=radio name=attr_AEssence value=8 spanspan
+                        input type=radio name=attr_AEssence value=9 spanspan
+                        input type=radio name=attr_AEssence value=10 spanspan
+                    div
+                    h1 class=separatorspanExperiencespanh1
+                    label class=essenceinput type=number name=attr_AExperience value=0 label
+                div
+            div
+        div
+    div
+		h1 class=separator vspacespanWeaponsspanh1
+    div class=combat-equipment
+        div class=weapons style=width 67%
+            
+            div class=vspacediv
+            span class=span-header center style=padding 0px; width 130pxWeapon  Attackspan
+            span class=span-header center style=padding 0px; width 49pxSpeedspan
+            span class=span-header center style=padding 0px; width 72pxAccuracyspan
+            span class=span-header center style=padding 0px; width 72pxDamagespan
+            span class=span-header center style=padding 0px; width 72pxDefensespan
+            span class=span-header center style=padding 0px; width 72pxRangespan
+            span class=span-header center style=padding 0px; width 72pxRatespan
+            fieldset class=repeating_attacks
+                div class=attack
+                    input type=text class=fancy style=width 134px name=attr_AAttackName 
+                    input type=number class=fancy very-narrow style=width 50px; margin-left -4px name=attr_AAttackSpeed min=3 value=6 
+                    input type=number class=fancy very-narrow style=width 73px; margin-left -4px name=attr_AAttackAccuracy value=0 
+                    select name=attr_AAttackDamageType class=fancy very-narrow style=width 73px; margin-left -4px
+                        option value=–option
+                        option value=BASHINGBashingoption
+                        option value=LETHALLethaloption
+                        option value=AGGRAVATEDAggravatedoption
+                    select
+                    input type=number class=fancy very-narrow style=width 73px; margin-left -4px name=attr_AAttackDefense value=0 
+                    input type=number class=fancy very-narrow style=width 73px; margin-left -4px name=attr_AAttackRange min=0 
+                    input type=number class=fancy very-narrow style=width 75px; margin-left -4px name=attr_AAttackRate min=1 value=1 
+                div
+            fieldset
+        div
+    div
+	
+	h1 class=separatorspanArmorspanh1
+	div class=armor
+            labelType input type=text name=attr_AArmorType label
+            div style=margin-bottom 10px
+                label style=display inlineBashinglabel input type=number class=fancy name=attr_AArmorBashingSoak min=0 value=0 
+                label style=display inlinelabel
+                label style=display inlineLethallabel input type=number class=fancy name=AArmorLethalSoak min=0 value=0 
+            div
+            labelFatigue input type=number name=attr_AArmorFatigue min=0 value=0 label
+            labelMobility input type=number name=attr_AArmorMobility max=0 value=0 label
+            label style=display block
+                Descriptionbr 
+                textarea class=two-lines name=attr_AArmorDescriptiontextarea
+            label
+        div
+	
+h1 class=separatorspanCharmsspanh1
+    span class=span-header style=width 310pxNamespan
+	span class=span-header style=width 100pxTypespan
+    span class=span-header style=width 120pxDurationspan
+    span class=span-header style=width 80pxCostspan
+    span class=span-headerEffectspan
+    fieldset class=repeating_charm
+        div class=charm
+            input type=text name=attr_ACharmName 
+			input type=text name=attr_ACharmType 
+            input type=text class=regular name=attr_ACharmDuration 
+            input type=text class=narrow name=attr_ACharmCost 
+            input type=text class=wide-flex name=attr_ACharmEffect 
+        div
+    fieldset
+
+
+h1 class=separatorspanSorceryspanh1
+    span class=span-header style=width 310pxNamespan
+	span class=span-header style=width 120pxTypespan
+    span class=span-header style=width 120pxDurationspan
+    span class=span-header style=width 80pxCostspan
+    span class=span-headerEffectspan
+    fieldset class=repeating_sorcery
+        div class=sorcery
+            input type=text name=attr_ASorceryName 
+				input type=text name=attr_ASorceryType 
+            input type=text class=regular name=attr_ASorceryDuration 
+            input type=text class=narrow name=attr_ASorceryCost 
+            input type=text class=wide-flex name=attr_ASorceryEffect 
+        div
+    fieldset
+    
+    h1 class=separatorspanArtifactsBackgroundsspanh1
+    span class=span-header style=width 193pxNamespan
+    span class=span-header style=width 77pxRatingspan
+    span class=span-headerEffectspan
+    fieldset class=repeating_artifacts
+        div class=artifacts
+            input type=text name=attr_AArtifactName 
+            select class=narrow name=attr_AArtifactRating
+                option value=1•option
+                option value=2••option
+                option value=3•••option
+                option value=4••••option
+                option value=5•••••option
+                option value=0NAoption
+            select
+            input type=text class=wide-flex name=attr_AArtifactEffect 
+        div
+    fieldset
+    
+    h1 class=separatorspanHearthstonesspanh1
+    span class=span-header style=width 265pxNamespan
+    span class=span-header style=width 120pxAspectspan
+    span class=span-header style=width 80pxRatingspan
+    span class=span-header style=width 250pxEffectspan
+    span class=span-headerSocketedspan
+    fieldset class=repeating_hearthstones
+        div class=hearthstones
+            input type=text name=attr_AHearthstoneName 
+            select class=regular name=attr_AHearthstoneAspect
+                option value=AirAiroption
+                option value=EarthEarthoption
+                option value=FireFireoption
+                option value=WaterWateroption
+                option value=WoodWoodoption
+                option value=SolarSolaroption
+                option value=AbyssalAbyssaloption
+                option value=InfernalInfernaloption
+                option value=LunarLunaroption
+                option value=SiderealSiderealoption
+            select
+            select class=narrow name=attr_AHearthstoneRating
+                option value=1•option
+                option value=2••option
+                option value=3•••option
+                option value=4••••option
+                option value=5•••••option
+                option value=0NAoption
+            select
+            input type=text class=wide-flex name=attr_AHearthstoneEffect 
+            span style=width 100px; text-align center; margin-left -10pxinput type=checkbox style=margin-top -10px name=attr_AHearthstoneSocketed value=1 spanspanspan
+        div
+    fieldset
+div
+
+div class=tab-content sidereal-tab
+ labelspanWork in Progressspanlabel
+div
+
+div class=tab-content lunar-tab
+h1 class=separatorspanAttributesspanh1
+    
+    div class=sheet-3colrow
+        div class=sheet-col
+            div class=attribute
+                input type=checkbox name=attr_LStrengthFavored value=1spanspan
+                span class=attributeStrengthspan
+                div class=dots
+                    input type=radio name=attr_LStrength value=1 checked=checked spanspan
+                    input type=radio name=attr_LStrength value=2 spanspan
+                    input type=radio name=attr_LStrength value=3 spanspan
+                    input type=radio name=attr_LStrength value=4 spanspan
+                    input type=radio name=attr_LStrength value=5 spanspan
+                div
+            div
+            div class=attribute
+                input type=checkbox name=attr_LDexterityFavored value=1spanspan
+                span class=attributeDexterityspan
+                div class=dots
+                    input type=radio name=attr_LDexterity value=1 checked=checked spanspan
+                    input type=radio name=attr_LDexterity value=2 spanspan
+                    input type=radio name=attr_LDexterity value=3 spanspan
+                    input type=radio name=attr_Dexterity value=4 spanspan
+                    input type=radio name=attr_LDexterity value=5 spanspan
+                div
+            div
+            div class=attribute
+                input type=checkbox name=attr_LStaminaFavored value=1spanspan
+                span class=attributeStaminaspan
+                div class=dots
+                    input type=radio name=attr_LStamina value=1 checked=checked spanspan
+                    input type=radio name=attr_LStamina value=2 spanspan
+                    input type=radio name=attr_LStamina value=3 spanspan
+                    input type=radio name=attr_LStamina value=4 spanspan
+                    input type=radio name=attr_LStamina value=5 spanspan
+                div
+            div
+        div
+        
+        div class=sheet-col
+            div class=attribute
+                input type=checkbox name=attr_LCharismaFavored value=1spanspan
+                span class=attributeCharismaspan
+                div class=dots
+                    input type=radio name=attr_LCharisma value=1 checked=checked spanspan
+                    input type=radio name=attr_LCharisma value=2 spanspan
+                    input type=radio name=attr_LCharisma value=3 spanspan
+                    input type=radio name=attr_LCharisma value=4 spanspan
+                    input type=radio name=attr_LCharisma value=5 spanspan
+                div
+            div
+            div class=attribute
+                input type=checkbox name=attr_LManipulationFavored value=1spanspan
+                span class=attributeManipulationspan
+                div class=dots
+                    input type=radio name=attr_LManipulation value=1 checked=checked spanspan
+                    input type=radio name=attr_LManipulation value=2 spanspan
+                    input type=radio name=attr_LManipulation value=3 spanspan
+                    input type=radio name=attr_LManipulation value=4 spanspan
+                    input type=radio name=attr_LManipulation value=5 spanspan
+                div
+            div
+            div class=attribute
+                input type=checkbox name=attr_LApperanceFavored value=1spanspan
+                span class=attributeAppearancespan
+                div class=dots
+                    input type=radio name=attr_LAppearance value=1 checked=checked spanspan
+                    input type=radio name=attr_LAppearance value=2 spanspan
+                    input type=radio name=attr_LAppearance value=3 spanspan
+                    input type=radio name=attr_LAppearance value=4 spanspan
+                    input type=radio name=attr_LAppearance value=5 spanspan
+                div
+            div
+        div
+        
+        div class=sheet-col
+            div class=attribute
+                input type=checkbox name=attr_LIntelligenceFavored value=1spanspan
+                span class=attributeIntelligencespan
+                div class=dots
+                    input type=radio name=attr_LIntelligence value=1 checked=checked spanspan
+                    input type=radio name=attr_LIntelligence value=2 spanspan
+                    input type=radio name=attr_LIntelligence value=3 spanspan
+                    input type=radio name=attr_LIntelligence value=4 spanspan
+                    input type=radio name=attr_LIntelligence value=5 spanspan
+                div
+            div
+            div class=attribute
+                input type=checkbox name=attr_LWitsFavored value=1spanspan
+                span class=attributeWitsspan
+                div class=dots
+                    input type=radio name=attr_LWits value=1 checked=checked spanspan
+                    input type=radio name=attr_LWits value=2 spanspan
+                    input type=radio name=attr_LWits value=3 spanspan
+                    input type=radio name=attr_LWits value=4 spanspan
+                    input type=radio name=attr_LWits value=5 spanspan
+                div
+            div
+            div class=attribute
+                input type=checkbox name=attr_LPerceptionFavored value=1spanspan
+                span class=attributePerceptionspan
+                div class=dots
+                    input type=radio name=attr_LPerception value=1 checked=checked spanspan
+                    input type=radio name=attr_LPerception value=2 spanspan
+                    input type=radio name=attr_LPerception value=3 spanspan
+                    input type=radio name=attr_LPerception value=4 spanspan
+                    input type=radio name=attr_LPerception value=5 spanspan
+                div
+            div
+        div
+    div
+    
+    h1 class=separatorspanAbilitiesspanh1
+    
+    div class=sheet-3colrow
+        div class=sheet-col
+            h3 class=abilityWarh3
+            div class=ability
+                input type=checkbox name=attr_LArcheryFavored value=1 spanspan
+                span class=abilityArcheryspan
+                div class=dots
+                    input type=checkbox name=attr_LArchery_max value=1 spanspan
+                    input type=radio name=attr_LArchery value=0 checked=checked 
+                    input type=radio name=attr_LArchery value=1 spanspan
+                    input type=radio name=attr_LArchery value=2 spanspan
+                    input type=radio name=attr_LArchery value=3 spanspan
+                    input type=radio name=attr_LArchery value=4 spanspan
+                    input type=radio name=attr_LArchery value=5 spanspan
+                div	
+            div
+			div class=ability
+                input type=checkbox name=attr_LAthleticsFavored value=1 spanspan
+                span class=abilityAthleticsspan
+                div class=dots
+                    input type=checkbox name=attr_LAthletics_max value=1 spanspan
+                    input type=radio name=attr_LAthletics value=0 checked=checked 
+                    input type=radio name=attr_LAthletics value=1 spanspan
+                    input type=radio name=attr_LAthletics value=2 spanspan
+                    input type=radio name=attr_LAthletics value=3 spanspan
+                    input type=radio name=attr_LAthletics value=4 spanspan
+                    input type=radio name=attr_LAthletics value=5 spanspan
+                div
+            div
+			div class=ability
+                input type=checkbox name=attr_LAwarenessFavored value=1 spanspan
+                span class=abilityAwarenessspan
+                div class=dots
+                    input type=checkbox name=attr_ALwareness_max value=1 spanspan
+                    input type=radio name=attr_LAwareness value=0 checked=checked 
+                    input type=radio name=attr_LAwareness value=1 spanspan
+                    input type=radio name=attr_LAwareness value=2 spanspan
+                    input type=radio name=attr_LAwareness value=3 spanspan
+                    input type=radio name=attr_LAwareness value=4 spanspan
+                    input type=radio name=attr_LAwareness value=5 spanspan
+                div
+            div
+			div class=ability
+                input type=checkbox name=attr_LDodgeFavored value=1 spanspan
+                span class=abilityDodgespan
+                div class=dots
+                    input type=checkbox name=attr_LDodge_max value=1 spanspan
+                    input type=radio name=attr_LDodge value=0 checked=checked 
+                    input type=radio name=attr_LDodge value=1 spanspan
+                    input type=radio name=attr_LDodge value=2 spanspan
+                    input type=radio name=attr_LDodge value=3 spanspan
+                    input type=radio name=attr_LDodge value=4 spanspan
+                    input type=radio name=attr_LDodge value=5 spanspan
+                div
+            div
+			div class=ability
+                input type=checkbox name=attr_LIntegrityFavored value=1 spanspan
+                span class=abilityIntegrityspan
+                div class=dots
+                    input type=checkbox name=attr_LIntegrity_max value=1 spanspan
+                    input type=radio name=attr_LIntegrity value=0 checked=checked 
+                    input type=radio name=attr_LIntegrity value=1 spanspan
+                    input type=radio name=attr_LIntegrity value=2 spanspan
+                    input type=radio name=attr_LIntegrity value=3 spanspan
+                    input type=radio name=attr_LIntegrity value=4 spanspan
+                    input type=radio name=attr_LIntegrity value=5 spanspan
+                div
+            div
+            div class=ability
+                input type=checkbox name=attr_LMartialArtsFavored value=1 spanspan
+                span class=abilityMartial Artsspan
+                div class=dots
+                    input type=checkbox name=attr_LMartialArts_max value=1 spanspan
+                    input type=radio name=attr_LMartialArts value=0 checked=checked 
+                    input type=radio name=attr_LMartialArts value=1 spanspan
+                    input type=radio name=attr_LMartialArts value=2 spanspan
+                    input type=radio name=attr_LMartialArts value=3 spanspan
+                    input type=radio name=attr_LMartialArts value=4 spanspan
+                    input type=radio name=attr_LMartialArts value=5 spanspan
+                div
+            div
+            div class=ability
+                input type=checkbox name=attr_LMeleeFavored value=1 spanspan
+                span class=abilityMeleespan
+                div class=dots
+                    input type=checkbox name=attr_LMelee_max value=1 spanspan
+                    input type=radio name=attr_LMelee value=0 checked=checked 
+                    input type=radio name=attr_LMelee value=1 spanspan
+                    input type=radio name=attr_LMelee value=2 spanspan
+                    input type=radio name=attr_LMelee value=3 spanspan
+                    input type=radio name=attr_LMelee value=4 spanspan
+                    input type=radio name=attr_LMelee value=5 spanspan
+                div
+            div
+			div class=ability
+                input type=checkbox name=attr_LResistanceFavored value=1 spanspan
+                span class=abilityResistancespan
+                div class=dots
+                    input type=checkbox name=attr_LResistance_max value=1 spanspan
+                    input type=radio name=attr_LResistance value=0 checked=checked 
+                    input type=radio name=attr_LResistance value=1 spanspan
+                    input type=radio name=attr_LResistance value=2 spanspan
+                    input type=radio name=attr_LResistance value=3 spanspan
+                    input type=radio name=attr_LResistance value=4 spanspan
+                    input type=radio name=attr_LResistance value=5 spanspan
+                div
+            div
+            div class=ability
+                input type=checkbox name=attr_LThrownFavored value=1 spanspan
+                span class=abilityThrownspan
+                div class=dots
+                    input type=checkbox name=attr_LThrown_max value=1 spanspan
+                    input type=radio name=attr_LThrown value=0 checked=checked 
+                    input type=radio name=attr_LThrown value=1 spanspan
+                    input type=radio name=attr_LThrown value=2 spanspan
+                    input type=radio name=attr_LThrown value=3 spanspan
+                    input type=radio name=attr_LThrown value=4 spanspan
+                    input type=radio name=attr_LThrown value=5 spanspan
+                div
+            div
+            div class=ability
+                input type=checkbox name=attr_LWarFavored value=1 spanspan
+                span class=abilityWarspan
+                div class=dots
+                    input type=checkbox name=attr_LWar_max value=1 spanspan
+                    input type=radio name=attr_LWar value=0 checked=checked 
+                    input type=radio name=attr_LWar value=1 spanspan
+                    input type=radio name=attr_LWar value=2 spanspan
+                    input type=radio name=attr_LWar value=3 spanspan
+                    input type=radio name=attr_LWar value=4 spanspan
+                    input type=radio name=attr_LWar value=5 spanspan
+                div
+            div
+        div
+        
+        div class=sheet-col
+            h3 class=abilityLifeh3
+            
+			div class=ability craft-types
+                input type=checkbox name=attr_LCraftFavored value=1 spanspan
+                span class=abilityCraftspan
+                ul class=craft-types
+                    li title=[Mundane] Making small, decorative, or high-precision items
+                        Air
+                        div class=dots
+                            input type=checkbox name=attr_LCraftAir_max value=1 spanspan
+                            input type=radio name=attr_LCraftAir value=0 checked=checked 
+                            input type=radio name=attr_LCraftAir value=1 spanspan
+                            input type=radio name=attr_LCraftAir value=2 spanspan
+                            input type=radio name=attr_LCraftAir value=3 spanspan
+                            input type=radio name=attr_LCraftAir value=4 spanspan
+                            input type=radio name=attr_LCraftAir value=5 spanspan
+                        div
+                    li
+                    li title=[Mundane] Creating buildings and large objects with stone or earth
+                        Earth
+                        div class=dots
+                            input type=checkbox name=attr_LCraftEarth_max value=1 spanspan
+                            input type=radio name=attr_LCraftEarth value=0 checked=checked 
+                            input type=radio name=attr_LCraftEarth value=1 spanspan
+                            input type=radio name=attr_LCraftEarth value=2 spanspan
+                            input type=radio name=attr_LCraftEarth value=3 spanspan
+                            input type=radio name=attr_LCraftEarth value=4 spanspan
+                            input type=radio name=attr_LCraftEarth value=5 spanspan
+                        div
+                    li
+                    li title=[Mundane] Forging and casting large metal objects and creating objects using fire
+                        Fire
+                        div class=dots
+                            input type=checkbox name=attr_LCraftFire_max value=1 spanspan
+                            input type=radio name=attr_LCraftFire value=0 checked=checked 
+                            input type=radio name=attr_LCraftFire value=1 spanspan
+                            input type=radio name=attr_LCraftFire value=2 spanspan
+                            input type=radio name=attr_LCraftFire value=3 spanspan
+                            input type=radio name=attr_LCraftFire value=4 spanspan
+                            input type=radio name=attr_LCraftFire value=5 spanspan
+                        div
+                    li
+                    li title=[Mundane] Boiling and cooking plants, chemicals, and animal materials
+                        Water
+                        div class=dots
+                            input type=checkbox name=attr_LCraftWater_max value=1 spanspan
+                            input type=radio name=attr_LCraftWater value=0 checked=checked 
+                            input type=radio name=attr_LCraftWater value=1 spanspan
+                            input type=radio name=attr_LCraftWater value=2 spanspan
+                            input type=radio name=attr_LCraftWater value=3 spanspan
+                            input type=radio name=attr_LCraftWater value=4 spanspan
+                            input type=radio name=attr_LCraftWater value=5 spanspan
+                        div
+                    li
+                    li title=[Mundane] Carving, weaving, and manipulating natural elements
+                        Wood
+                        div class=dots
+                            input type=checkbox name=attr_LCraftWood_max value=1 spanspan
+                            input type=radio name=attr_LCraftWood value=0 checked=checked 
+                            input type=radio name=attr_LCraftWood value=1 spanspan
+                            input type=radio name=attr_LCraftWood value=2 spanspan
+                            input type=radio name=attr_LCraftWood value=3 spanspan
+                            input type=radio name=attr_LCraftWood value=4 spanspan
+                            input type=radio name=attr_LCraftWood value=5 spanspan
+                        div
+                    li
+                    li title=[Esoteric, Sidereal] Manipulate fate for certain Astrologies and Charms
+                        Fate
+                        div class=dots
+                            input type=checkbox name=attr_LCraftFate_max value=1 spanspan
+                            input type=radio name=attr_LCraftFate value=0 checked=checked 
+                            input type=radio name=attr_LCraftFate value=1 spanspan
+                            input type=radio name=attr_LCraftFate value=2 spanspan
+                            input type=radio name=attr_LCraftFate value=3 spanspan
+                            input type=radio name=attr_LCraftFate value=4 spanspan
+                            input type=radio name=attr_LCraftFate value=5 spanspan
+                        div
+                    li
+                    li title=[Esoteric, First Age] Create or modify life
+                        Genesis
+                        div class=dots
+                            input type=checkbox name=attr_LCraftGenesis_max value=1 spanspan
+                            input type=radio name=attr_LCraftGenesis value=0 checked=checked 
+                            input type=radio name=attr_LCraftGenesis value=1 spanspan
+                            input type=radio name=attr_LCraftGenesis value=2 spanspan
+                            input type=radio name=attr_LCraftGenesis value=3 spanspan
+                            input type=radio name=attr_LCraftGenesis value=4 spanspan
+                            input type=radio name=attr_LCraftGenesis value=5 spanspan
+                        div
+                    li
+                    li title=[Esoteric, Raksha] Manipulate the physical manifestation of shaping effects, from Essence to dreams
+                        Glamour
+                        div class=dots
+                            input type=checkbox name=attr_LCraftGlamour_max value=1 spanspan
+                            input type=radio name=attr_LCraftGlamour value=0 checked=checked 
+                            input type=radio name=attr_LCraftGlamour value=1 spanspan
+                            input type=radio name=attr_LCraftGlamour value=2 spanspan
+                            input type=radio name=attr_LCraftGlamour value=3 spanspan
+                            input type=radio name=attr_LCraftGlamour value=4 spanspan
+                            input type=radio name=attr_LCraftGlamour value=5 spanspan
+                        div
+                    li
+                    li title=[Esoteric, First Age] Creation, enchantment, and maintenance of First Age devices
+                        Magitech
+                        div class=dots
+                            input type=checkbox name=attr_LCraftMagitech_max value=1 spanspan
+                            input type=radio name=attr_LCraftMagitech value=0 checked=checked 
+                            input type=radio name=attr_LCraftMagitech value=1 spanspan
+                            input type=radio name=attr_LCraftMagitech value=2 spanspan
+                            input type=radio name=attr_LCraftMagitech value=3 spanspan
+                            input type=radio name=attr_LCraftMagitech value=4 spanspan
+                            input type=radio name=attr_LCraftMagitech value=5 spanspan
+                        div
+                    li
+					li title=[, ] 
+                        Necrotech
+                        div class=dots
+                            input type=checkbox name=attr_LCraftNecrotech_max value=1 spanspan
+                            input type=radio name=attr_LCraftNecrotech value=0 checked=checked 
+                            input type=radio name=attr_LCraftNecrotech value=1 spanspan
+                            input type=radio name=attr_LCraftNecrotech value=2 spanspan
+                            input type=radio name=attr_LCraftNecrotech value=3 spanspan
+                            input type=radio name=attr_LCraftNecrotech value=4 spanspan
+                            input type=radio name=attr_LCraftNecrotech value=5 spanspan
+                        div
+                    li
+                    li title=[Esoteric, Infernal] Use Malfean Vitriol to catalyze a mundane Craft
+                        Vitriol
+                        div class=dots
+                            input type=checkbox name=attr_LCraftVitriol_max value=1 spanspan
+                            input type=radio name=attr_LCraftVitriol value=0 checked=checked 
+                            input type=radio name=attr_LCraftVitriol value=1 spanspan
+                            input type=radio name=attr_LCraftVitriol value=2 spanspan
+                            input type=radio name=attr_LCraftVitriol value=3 spanspan
+                            input type=radio name=attr_LCraftVitriol value=4 spanspan
+                            input type=radio name=attr_LCraftVitriol value=5 spanspan
+                        div
+                    li
+                ul
+                div class=right style=padding-right 20px; font-style italicHover to select craftsdiv
+            div
+			div class=ability
+                input type=checkbox name=attr_LLarcenyFavored value=1 spanspan
+                span class=abilityLarcenyspan
+                div class=dots
+                    input type=checkbox name=attr_LLarceny_max value=1 spanspan
+                    input type=radio name=attr_LLarceny value=0 checked=checked 
+                    input type=radio name=attr_LLarceny value=1 spanspan
+                    input type=radio name=attr_LLarceny value=2 spanspan
+                    input type=radio name=attr_LLarceny value=3 spanspan
+                    input type=radio name=attr_LLarceny value=4 spanspan
+                    input type=radio name=attr_LLarceny value=5 spanspan
+                div
+            div
+			div class=ability
+                input type=checkbox name=attr_LLinguisticsFavored value=1 spanspan
+                span class=abilityLinguisticsspan
+                div class=dots
+                    input type=checkbox name=attr_LLinguistics_max value=1 spanspan
+                    input type=radio name=attr_LLinguistics value=0 checked=checked 
+                    input type=radio name=attr_LLinguistics value=1 spanspan
+                    input type=radio name=attr_LLinguistics value=2 spanspan
+                    input type=radio name=attr_LLinguistics value=3 spanspan
+                    input type=radio name=attr_LLinguistics value=4 spanspan
+                    input type=radio name=attr_LLinguistics value=5 spanspan
+                div
+            div
+            div class=ability
+                input type=checkbox name=attr_LPerformanceFavored value=1 spanspan
+                span class=abilityPerformancespan
+                div class=dots
+                    input type=checkbox name=attr_LPerformance_max value=1 spanspan
+                    input type=radio name=attr_LPerformance value=0 checked=checked 
+                    input type=radio name=attr_LPerformance value=1 spanspan
+                    input type=radio name=attr_LPerformance value=2 spanspan
+                    input type=radio name=attr_LPerformance value=3 spanspan
+                    input type=radio name=attr_LPerformance value=4 spanspan
+                    input type=radio name=attr_LPerformance value=5 spanspan
+                div
+            div
+            div class=ability
+                input type=checkbox name=attr_LPresenceFavored value=1 spanspan
+                span class=abilityPresencespan
+                div class=dots
+                    input type=checkbox name=attr_LPresence_max value=1 spanspan
+                    input type=radio name=attr_LPresence value=0 checked=checked 
+                    input type=radio name=attr_LPresence value=1 spanspan
+                    input type=radio name=attr_LPresence value=2 spanspan
+                    input type=radio name=attr_LPresence value=3 spanspan
+                    input type=radio name=attr_LPresence value=4 spanspan
+                    input type=radio name=attr_LPresence value=5 spanspan
+                div
+            div
+			div class=ability
+                input type=checkbox name=attr_LRideFavored value=1 spanspan
+                span class=abilityRidespan
+                div class=dots
+                    input type=checkbox name=attr_LRide_max value=1 spanspan
+                    input type=radio name=attr_LRide value=0 checked=checked 
+                    input type=radio name=attr_LRide value=1 spanspan
+                    input type=radio name=attr_LRide value=2 spanspan
+                    input type=radio name=attr_LRide value=3 spanspan
+                    input type=radio name=attr_LRide value=4 spanspan
+                    input type=radio name=attr_LRide value=5 spanspan
+                div
+            div
+			div class=ability
+                input type=checkbox name=attr_LSailFavored value=1 spanspan
+                span class=abilitySailspan
+                div class=dots
+                    input type=checkbox name=attr_LSail_max value=1 spanspan
+                    input type=radio name=attr_LSail value=0 checked=checked 
+                    input type=radio name=attr_LSail value=1 spanspan
+                    input type=radio name=attr_LSail value=2 spanspan
+                    input type=radio name=attr_LSail value=3 spanspan
+                    input type=radio name=attr_LSail value=4 spanspan
+                    input type=radio name=attr_LSail value=5 spanspan
+                div
+            div
+			div class=ability
+                input type=checkbox name=attr_LSocializeFavored value=1 spanspan
+                span class=abilitySocializespan
+                div class=dots
+                    input type=checkbox name=attr_LSocialize_max value=1 spanspan
+                    input type=radio name=attr_LSocialize value=0 checked=checked 
+                    input type=radio name=attr_LSocialize value=1 spanspan
+                    input type=radio name=attr_LSocialize value=2 spanspan
+                    input type=radio name=attr_LSocialize value=3 spanspan
+                    input type=radio name=attr_LSocialize value=4 spanspan
+                    input type=radio name=attr_LSocialize value=5 spanspan
+                div
+            div
+			div class=ability
+                input type=checkbox name=attr_LStealthFavored value=1 spanspan
+                span class=abilityStealthspan
+                div class=dots
+                    input type=checkbox name=attr_LStealth_max value=1 spanspan
+                    input type=radio name=attr_LStealth value=0 checked=checked 
+                    input type=radio name=attr_LStealth value=1 spanspan
+                    input type=radio name=attr_LStealth value=2 spanspan
+                    input type=radio name=attr_LStealth value=3 spanspan
+                    input type=radio name=attr_LStealth value=4 spanspan
+                    input type=radio name=attr_LStealth value=5 spanspan
+                div
+            div
+            div class=ability
+                input type=checkbox name=attr_LSurvivalFavored value=1 spanspan
+                span class=abilitySurvivalspan
+                div class=dots
+                    input type=checkbox name=attr_LSurvival_max value=1 spanspan
+                    input type=radio name=attr_LSurvival value=0 checked=checked 
+                    input type=radio name=attr_LSurvival value=1 spanspan
+                    input type=radio name=attr_LSurvival value=2 spanspan
+                    input type=radio name=attr_LSurvival value=3 spanspan
+                    input type=radio name=attr_LSurvival value=4 spanspan
+                    input type=radio name=attr_LSurvival value=5 spanspan
+                div
+            div
+        div
+        
+        div class=sheet-col
+            h3 class=abilityWisdomh3
+            
+			div class=ability
+                input type=checkbox name=attr_LBureaucracyFavored value=1 spanspan
+                span class=abilityBureaucracyspan
+                div class=dots
+                    input type=checkbox name=attr_LBureaucracy_max value=1 spanspan
+                    input type=radio name=attr_LBureaucracy value=0 checked=checked 
+                    input type=radio name=attr_LBureaucracy value=1 spanspan
+                    input type=radio name=attr_LBureaucracy value=2 spanspan
+                    input type=radio name=attr_LBureaucracy value=3 spanspan
+                    input type=radio name=attr_LBureaucracy value=4 spanspan
+                    input type=radio name=attr_LBureaucracy value=5 spanspan
+                div
+            div
+            div class=ability
+                input type=checkbox name=attr_LInvestigationFavored value=1 spanspan
+                span class=abilityInvestigationspan
+                div class=dots
+                    input type=checkbox name=attr_LInvestigation_max value=1 spanspan
+                    input type=radio name=attr_LInvestigation value=0 checked=checked 
+                    input type=radio name=attr_LInvestigation value=1 spanspan
+                    input type=radio name=attr_LInvestigation value=2 spanspan
+                    input type=radio name=attr_LInvestigation value=3 spanspan
+                    input type=radio name=attr_LInvestigation value=4 spanspan
+                    input type=radio name=attr_LInvestigation value=5 spanspan
+                div
+            div
+            div class=ability
+                input type=checkbox name=attr_LLoreFavored value=1 spanspan
+                span class=abilityLorespan
+                div class=dots
+                    input type=checkbox name=attr_LLore_max value=1 spanspan
+                    input type=radio name=attr_LLore value=0 checked=checked 
+                    input type=radio name=attr_LLore value=1 spanspan
+                    input type=radio name=attr_LLore value=2 spanspan
+                    input type=radio name=attr_LLore value=3 spanspan
+                    input type=radio name=attr_LLore value=4 spanspan
+                    input type=radio name=attr_LLore value=5 spanspan
+                div
+            div
+            div class=ability
+                input type=checkbox name=attr_LMedicineFavored value=1 spanspan
+                span class=abilityMedicinespan
+                div class=dots
+                    input type=checkbox name=attr_LMedicine_max value=1 spanspan
+                    input type=radio name=attr_LMedicine value=0 checked=checked 
+                    input type=radio name=attr_LMedicine value=1 spanspan
+                    input type=radio name=attr_LMedicine value=2 spanspan
+                    input type=radio name=attr_LMedicine value=3 spanspan
+                    input type=radio name=attr_LMedicine value=4 spanspan
+                    input type=radio name=attr_LMedicine value=5 spanspan
+                div
+            div
+            div class=ability
+                input type=checkbox name=attr_LOccultFavored value=1 spanspan
+                span class=abilityOccultspan
+                div class=dots
+                    input type=checkbox name=attr_LOccult_max value=1 spanspan
+                    input type=radio name=attr_LOccult value=0 checked=checked 
+                    input type=radio name=attr_LOccult value=1 spanspan
+                    input type=radio name=attr_LOccult value=2 spanspan
+                    input type=radio name=attr_LOccult value=3 spanspan
+                    input type=radio name=attr_LOccult value=4 spanspan
+                    input type=radio name=attr_LOccult value=5 spanspan
+                div
+            div
+        div
+    div
+    
+    
+    
+    div class=sheet-3colrow
+        div class=sheet-col
+            h1 class=separatorspanAnimaspanh1
+            textarea name=attr_LAnimaLong class=four-linestextarea
+            h1 class=separatorspanLimit Breakspanh1
+            div class=dots center
+                input type=checkbox name=attr_LLimit_Zero spanspan
+                input type=radio name=attr_LLimit value=0 checked=checked 
+                input type=radio name=attr_LLimit value=1 spanspan
+                input type=radio name=attr_LLimit value=2 spanspan
+                input type=radio name=attr_LLimit value=3 spanspan
+                input type=radio name=attr_LLimit value=4 spanspan
+                input type=radio name=attr_LLimit value=5 spanspan
+                input type=radio name=attr_LLimit value=6 spanspan
+                input type=radio name=attr_LLimit value=7 spanspan
+                input type=radio name=attr_LLimit value=8 spanspan
+                input type=radio name=attr_LLimit value=9 spanspan
+                input type=radio name=attr_LLimit value=10 spanspan
+            div
+            h1 class=separatorspanVirtue Flawspanh1
+            textarea name=attr_LVirtueFlaw class=three-linestextarea
+        div
+        div class=sheet-col
+            div class=sheet-2colrow sheet-sub2colrow
+                div class=sheet-col
+                    h1 class=separatorspanWillpowerspanh1
+                    div class=dots center
+                        input type=radio name=attr_LWillpower value=1 spanspan
+                        input type=radio name=attr_LWillpower value=2 spanspan
+                        input type=radio name=attr_LWillpower value=3 spanspan
+                        input type=radio name=attr_LWillpower value=4 spanspan
+                        input type=radio name=attr_LWillpower value=5 checked=checked spanspan
+                        input type=radio name=attr_LWillpower value=6 spanspan
+                        input type=radio name=attr_LWillpower value=7 spanspan
+                        input type=radio name=attr_LWillpower value=8 spanspan
+                        input type=radio name=attr_LWillpower value=9 spanspan
+                        input type=radio name=attr_LWillpower value=10 spanspan
+                    div
+                    div class=will center
+                        input type=checkbox name=attr_LTempWillpower1 value=1 spanspan
+                        input type=checkbox name=attr_LTempWillpower2 value=1 spanspan
+                        input type=checkbox name=attr_LTempWillpower3 value=1 spanspan
+                        input type=checkbox name=attr_LTempWillpower4 value=1 spanspan
+                        input type=checkbox name=attr_LTempWillpower5 value=1 spanspan
+                        input type=checkbox name=attr_LTempWillpower6 value=1 spanspan
+                        input type=checkbox name=attr_LTempWillpower7 value=1 spanspan
+                        input type=checkbox name=attr_LTempWillpower8 value=1 spanspan
+                        input type=checkbox name=attr_LTempWillpower9 value=1 spanspan
+                        input type=checkbox name=attr_LTempWillpower10 value=1 spanspan
+                    div
+                    h1 class=separatorspanHealthspanh1
+                    h3 class=centerSoakh3
+                    label class=soakB input type=number name=attr_LBashingSoak value=0 min=0 label
+                    label class=soakL input type=number name=attr_LLethalSoak value=0 min=0 label
+                    label class=soakA input type=number name=attr_LAggravatedSoak value=0 min=0 label
+                    h3 class=centerDodge Defenseh3
+                    input type=hidden name=attr_DodgeDVInitial disabled=true value=ceil((@{Dexterity}-abs(@{ArmorMobility})+@{Dodge}(1-@{Dodgemax})+@{Essence})2) 
+                    label class=dvDV input type=number name=attr_LDodgeDVlabel
+                    label class=dvMDV input type=number name=attr_LDodgeMDVlabel
+                    div style=width 80%; margin-left 10%
+                        hr 
+                        fieldset class=repeating_health
+                            div class=health
+                                select name=attr_LWoundPenalty class=health-label
+                                    option value=-0-0option
+                                    option value=-1-1option
+                                    option value=-2-2option
+                                    option value=-4-4option
+                                select
+                                select name=attr_LDamage class=health-value
+                                    option value=none☐ (no damage)option
+                                    option value=bashing&nbsp;∕ (bashing damage)option
+                                    option value=lethal☓ (lethal damage)option
+                                    option value=aggravated✱ (aggravated damage)option
+                                select
+                            div
+                        fieldset
+                        div class=health
+                            Incapacitated
+                            select name=attr_LIncapacitatedDamage class=health-value
+                                option value=none☐ (no damage)option
+                                option value=bashing&nbsp;∕ (bashing damage)option
+                                option value=lethal☓ (lethal damage)option
+                                option value=aggravated✱ (aggravated damage)option
+                            select
+                        div
+                    div
+                div
+                div class=sheet-col
+                    h1 class=separatorspanVirtuesspanh1
+                    div class=virtue
+                        h4Compassionh4
+                        div class=dots
+                            input type=radio name=attr_LCompassion value=1 checked=checked spanspan
+                            input type=radio name=attr_LCompassion value=2 spanspan
+                            input type=radio name=attr_LCompassion value=3 spanspan
+                            input type=radio name=attr_LCompassion value=4 spanspan
+                            input type=radio name=attr_LCompassion value=5 spanspan
+                        div
+                        div class=will
+                            input type=checkbox name=attr_LTempCompassion1 value=1 spanspan
+                            input type=checkbox name=attr_LTempCompassion2 value=1 spanspan
+                            input type=checkbox name=attr_LTempCompassion3 value=1 spanspan
+                            input type=checkbox name=attr_LTempCompassion4 value=1 spanspan
+                            input type=checkbox name=attr_LTempCompassion5 value=1 spanspan
+                        div
+                    div
+                    div class=virtue
+                        h4Temperanceh4
+                        div class=dots
+                            input type=radio name=attr_LTemperance value=1 checked=checked spanspan
+                            input type=radio name=attr_LTemperance value=2 spanspan
+                            input type=radio name=attr_LTemperance value=3 spanspan
+                            input type=radio name=attr_LTemperance value=4 spanspan
+                            input type=radio name=attr_LTemperance value=5 spanspan
+                        div
+                        div class=will
+                            input type=checkbox name=attr_LTempTemperance1 value=1 spanspan
+                            input type=checkbox name=attr_LTempTemperance2 value=1 spanspan
+                            input type=checkbox name=attr_LTempTemperance3 value=1 spanspan
+                            input type=checkbox name=attr_LTempTemperance4 value=1 spanspan
+                            input type=checkbox name=attr_LTempTemperance5 value=1 spanspan
+                        div
+                    div
+                    div class=virtue
+                        h4Convictionh4
+                        div class=dots
+                            input type=radio name=attr_LConviction value=1 checked=checked spanspan
+                            input type=radio name=attr_LConviction value=2 spanspan
+                            input type=radio name=attr_LConviction value=3 spanspan
+                            input type=radio name=attr_LConviction value=4 spanspan
+                            input type=radio name=attr_LConviction value=5 spanspan
+                        div
+                        div class=will
+                            input type=checkbox name=attr_LTempConviction1 value=1 spanspan
+                            input type=checkbox name=attr_LTempConviction2 value=1 spanspan
+                            input type=checkbox name=attr_LTempConviction3 value=1 spanspan
+                            input type=checkbox name=attr_LTempConviction4 value=1 spanspan
+                            input type=checkbox name=attr_LTempConviction5 value=1 spanspan
+                        div
+                    div
+                    div class=virtue
+                        h4Valorh4
+                        div class=dots
+                            input type=radio name=attr_LValor value=1 checked=checked spanspan
+                            input type=radio name=attr_LValor value=2 spanspan
+                            input type=radio name=attr_LValor value=3 spanspan
+                            input type=radio name=attr_LValor value=4 spanspan
+                            input type=radio name=attr_LValor value=5 spanspan
+                        div
+                        div class=will
+                            input type=checkbox name=attr_LTempValor1 value=1 spanspan
+                            input type=checkbox name=attr_LTempValor2 value=1 spanspan
+                            input type=checkbox name=attr_LTempValor3 value=1 spanspan
+                            input type=checkbox name=attr_LTempValor4 value=1 spanspan
+                            input type=checkbox name=attr_LTempValor5 value=1 spanspan
+                        div
+                    div
+                    h1 class=separatorspanEssencespanh1
+                    div class=dots
+                        input type=radio name=attr_LEssence value=1 checked=checked spanspan
+                        input type=radio name=attr_LEssence value=2 spanspan
+                        input type=radio name=attr_LEssence value=3 spanspan
+                        input type=radio name=attr_LEssence value=4 spanspan
+                        input type=radio name=attr_LEssence value=5 spanspan
+                        input type=radio name=attr_LEssence value=6 spanspan
+                        input type=radio name=attr_LEssence value=7 spanspan
+                        input type=radio name=attr_LEssence value=8 spanspan
+                        input type=radio name=attr_LEssence value=9 spanspan
+                        input type=radio name=attr_LEssence value=10 spanspan
+                    div
+                    h1 class=separatorspanExperiencespanh1
+                    label class=essenceinput type=number name=attr_LExperience value=0 label
+                div
+            div
+        div
+    div
+	
+		h1 class=separator vspacespanHeart's Bloodspanh1
+    textarea name=attr_VirtueFlaw class=three-linestextarea
+	
+	h1 class=separator vspacespanWeaponsspanh1
+    div class=combat-equipment
+        div class=weapons style=width 67%
+            
+            div class=vspacediv
+            span class=span-header center style=padding 0px; width 130pxWeapon  Attackspan
+            span class=span-header center style=padding 0px; width 49pxSpeedspan
+            span class=span-header center style=padding 0px; width 72pxAccuracyspan
+            span class=span-header center style=padding 0px; width 72pxDamagespan
+            span class=span-header center style=padding 0px; width 72pxDefensespan
+            span class=span-header center style=padding 0px; width 72pxRangespan
+            span class=span-header center style=padding 0px; width 72pxRatespan
+            fieldset class=repeating_attacks
+                div class=attack
+                    input type=text class=fancy style=width 134px name=attr_AttackName 
+                    input type=number class=fancy very-narrow style=width 50px; margin-left -4px name=attr_LAttackSpeed min=3 value=6 
+                    input type=number class=fancy very-narrow style=width 73px; margin-left -4px name=attr_LAttackAccuracy value=0 
+                    select name=attr_LAttackDamageType class=fancy very-narrow style=width 73px; margin-left -4px
+                        option value=–option
+                        option value=BASHINGBashingoption
+                        option value=LETHALLethaloption
+                        option value=AGGRAVATEDAggravatedoption
+                    select
+                    input type=number class=fancy very-narrow style=width 73px; margin-left -4px name=attr_LAttackDefense value=0 
+                    input type=number class=fancy very-narrow style=width 73px; margin-left -4px name=attr_LAttackRange min=0 
+                    input type=number class=fancy very-narrow style=width 75px; margin-left -4px name=attr_LAttackRate min=1 value=1 
+                div
+            fieldset
+        div
+    div
+	
+	h1 class=separatorspanArmorspanh1
+	div class=armor
+            labelType input type=text name=attr_ArmorType label
+            div style=margin-bottom 10px
+                label style=display inlineBashinglabel input type=number class=fancy name=attr_LArmorBashingSoak min=0 value=0 
+                label style=display inlinelabel
+                label style=display inlineLethallabel input type=number class=fancy name=LArmorLethalSoak min=0 value=0 
+            div
+            labelFatigue input type=number name=attr_LArmorFatigue min=0 value=0 label
+            labelMobility input type=number name=attr_LArmorMobility max=0 value=0 label
+            label style=display block
+                Descriptionbr 
+                textarea class=two-lines name=attr_LArmorDescriptiontextarea
+            label
+        div
+h1 class=separatorspanCharmsspanh1
+    span class=span-header style=width 310pxNamespan
+	span class=span-header style=width 100pxTypespan
+    span class=span-header style=width 120pxDurationspan
+    span class=span-header style=width 80pxCostspan
+    span class=span-headerEffectspan
+    fieldset class=repeating_charm
+        div class=charm
+            input type=text name=attr_LCharmName 
+			input type=text name=attr_LCharmType 
+            input type=text class=regular name=attr_LCharmDuration 
+            input type=text class=narrow name=attr_LCharmCost 
+            input type=text class=wide-flex name=attr_LCharmEffect 
+        div
+    fieldset
+
+
+h1 class=separatorspanSorceryspanh1
+    span class=span-header style=width 310pxNamespan
+	span class=span-header style=width 120pxTypespan
+    span class=span-header style=width 120pxDurationspan
+    span class=span-header style=width 80pxCostspan
+    span class=span-headerEffectspan
+    fieldset class=repeating_sorcery
+        div class=sorcery
+            input type=text name=attr_LSorceryName 
+				input type=text name=attr_LSorceryType 
+            input type=text class=regular name=attr_LSorceryDuration 
+            input type=text class=narrow name=attr_LSorceryCost 
+            input type=text class=wide-flex name=attr_LSorceryEffect 
+        div
+    fieldset
+    
+    h1 class=separatorspanArtifactsBackgroundsspanh1
+    span class=span-header style=width 193pxNamespan
+    span class=span-header style=width 77pxRatingspan
+    span class=span-headerEffectspan
+    fieldset class=repeating_artifacts
+        div class=artifacts
+            input type=text name=attr_LArtifactName 
+            select class=narrow name=attr_LArtifactRating
+                option value=1•option
+                option value=2••option
+                option value=3•••option
+                option value=4••••option
+                option value=5•••••option
+                option value=0NAoption
+            select
+            input type=text class=wide-flex name=attr_LArtifactEffect 
+        div
+    fieldset
+	
+    
+    h1 class=separatorspanHearthstonesspanh1
+    span class=span-header style=width 265pxNamespan
+    span class=span-header style=width 120pxAspectspan
+    span class=span-header style=width 80pxRatingspan
+    span class=span-header style=width 250pxEffectspan
+    span class=span-headerSocketedspan
+    fieldset class=repeating_hearthstones
+        div class=hearthstones
+            input type=text name=attr_LHearthstoneName 
+            select class=regular name=attr_LHearthstoneAspect
+                option value=AirAiroption
+                option value=EarthEarthoption
+                option value=FireFireoption
+                option value=WaterWateroption
+                option value=WoodWoodoption
+                option value=SolarSolaroption
+                option value=AbyssalAbyssaloption
+                option value=InfernalInfernaloption
+                option value=LunarLunaroption
+                option value=SiderealSiderealoption
+            select
+            select class=narrow name=attr_LHearthstoneRating
+                option value=1•option
+                option value=2••option
+                option value=3•••option
+                option value=4••••option
+                option value=5•••••option
+                option value=0NAoption
+            select
+            input type=text class=wide-flex name=attr_LHearthstoneEffect 
+            span style=width 100px; text-align center; margin-left -10pxinput type=checkbox style=margin-top -10px name=attr_LHearthstoneSocketed value=1 spanspanspan
+        div
+    fieldset	
+div
+
+
+
+div class=tab-content solar-tab
+    h1 class=separatorspanAttributesspanh1
+    
+    div class=sheet-3colrow
+        div class=sheet-col
+            div class=attribute
+                input type=checkbox name=attr_StrengthFavored value=1spanspan
+                span class=attributeStrengthspan
+                div class=dots
+                    input type=radio name=attr_Strength value=1 checked=checked spanspan
+                    input type=radio name=attr_Strength value=2 spanspan
+                    input type=radio name=attr_Strength value=3 spanspan
+                    input type=radio name=attr_Strength value=4 spanspan
+                    input type=radio name=attr_Strength value=5 spanspan
+                div
+            div
+            div class=attribute
+                input type=checkbox name=attr_DexterityFavored value=1spanspan
+                span class=attributeDexterityspan
+                div class=dots
+                    input type=radio name=attr_Dexterity value=1 checked=checked spanspan
+                    input type=radio name=attr_Dexterity value=2 spanspan
+                    input type=radio name=attr_Dexterity value=3 spanspan
+                    input type=radio name=attr_Dexterity value=4 spanspan
+                    input type=radio name=attr_Dexterity value=5 spanspan
+                div
+            div
+            div class=attribute
+                input type=checkbox name=attr_StaminaFavored value=1spanspan
+                span class=attributeStaminaspan
+                div class=dots
+                    input type=radio name=attr_Stamina value=1 checked=checked spanspan
+                    input type=radio name=attr_Stamina value=2 spanspan
+                    input type=radio name=attr_Stamina value=3 spanspan
+                    input type=radio name=attr_Stamina value=4 spanspan
+                    input type=radio name=attr_Stamina value=5 spanspan
+                div
+            div
+        div
+        
+        div class=sheet-col
+            div class=attribute
+                input type=checkbox name=attr_CharismaFavored value=1spanspan
+                span class=attributeCharismaspan
+                div class=dots
+                    input type=radio name=attr_Charisma value=1 checked=checked spanspan
+                    input type=radio name=attr_Charisma value=2 spanspan
+                    input type=radio name=attr_Charisma value=3 spanspan
+                    input type=radio name=attr_Charisma value=4 spanspan
+                    input type=radio name=attr_Charisma value=5 spanspan
+                div
+            div
+            div class=attribute
+                input type=checkbox name=attr_ManipulationFavored value=1spanspan
+                span class=attributeManipulationspan
+                div class=dots
+                    input type=radio name=attr_Manipulation value=1 checked=checked spanspan
+                    input type=radio name=attr_Manipulation value=2 spanspan
+                    input type=radio name=attr_Manipulation value=3 spanspan
+                    input type=radio name=attr_Manipulation value=4 spanspan
+                    input type=radio name=attr_Manipulation value=5 spanspan
+                div
+            div
+            div class=attribute
+                input type=checkbox name=attr_ApperanceFavored value=1spanspan
+                span class=attributeAppearancespan
+                div class=dots
+                    input type=radio name=attr_Appearance value=1 checked=checked spanspan
+                    input type=radio name=attr_Appearance value=2 spanspan
+                    input type=radio name=attr_Appearance value=3 spanspan
+                    input type=radio name=attr_Appearance value=4 spanspan
+                    input type=radio name=attr_Appearance value=5 spanspan
+                div
+            div
+        div
+        
+        div class=sheet-col
+            div class=attribute
+                input type=checkbox name=attr_IntelligenceFavored value=1spanspan
+                span class=attributeIntelligencespan
+                div class=dots
+                    input type=radio name=attr_Intelligence value=1 checked=checked spanspan
+                    input type=radio name=attr_Intelligence value=2 spanspan
+                    input type=radio name=attr_Intelligence value=3 spanspan
+                    input type=radio name=attr_Intelligence value=4 spanspan
+                    input type=radio name=attr_Intelligence value=5 spanspan
+                div
+            div
+            div class=attribute
+                input type=checkbox name=attr_WitsFavored value=1spanspan
+                span class=attributeWitsspan
+                div class=dots
+                    input type=radio name=attr_Wits value=1 checked=checked spanspan
+                    input type=radio name=attr_Wits value=2 spanspan
+                    input type=radio name=attr_Wits value=3 spanspan
+                    input type=radio name=attr_Wits value=4 spanspan
+                    input type=radio name=attr_Wits value=5 spanspan
+                div
+            div
+            div class=attribute
+                input type=checkbox name=attr_PerceptionFavored value=1spanspan
+                span class=attributePerceptionspan
+                div class=dots
+                    input type=radio name=attr_Perception value=1 checked=checked spanspan
+                    input type=radio name=attr_Perception value=2 spanspan
+                    input type=radio name=attr_Perception value=3 spanspan
+                    input type=radio name=attr_Perception value=4 spanspan
+                    input type=radio name=attr_Perception value=5 spanspan
+                div
+            div
+        div
+    div
+    
+    h1 class=separatorspanAbilitiesspanh1
+    
+    div class=sheet-3colrow
+        div class=sheet-col
+            h3 class=abilityDawnh3
+            div class=ability
+                input type=checkbox name=attr_ArcheryFavored value=1 spanspan
+                span class=abilityArcheryspan
+                div class=dots
+                    input type=checkbox name=attr_Archery_max value=1 spanspan
+                    input type=radio name=attr_Archery value=0 checked=checked 
+                    input type=radio name=attr_Archery value=1 spanspan
+                    input type=radio name=attr_Archery value=2 spanspan
+                    input type=radio name=attr_Archery value=3 spanspan
+                    input type=radio name=attr_Archery value=4 spanspan
+                    input type=radio name=attr_Archery value=5 spanspan
+                div
+            div
+            div class=ability
+                input type=checkbox name=attr_MartialArtsFavored value=1 spanspan
+                span class=abilityMartial Artsspan
+                div class=dots
+                    input type=checkbox name=attr_MartialArts_max value=1 spanspan
+                    input type=radio name=attr_MartialArts value=0 checked=checked 
+                    input type=radio name=attr_MartialArts value=1 spanspan
+                    input type=radio name=attr_MartialArts value=2 spanspan
+                    input type=radio name=attr_MartialArts value=3 spanspan
+                    input type=radio name=attr_MartialArts value=4 spanspan
+                    input type=radio name=attr_MartialArts value=5 spanspan
+                div
+            div
+            div class=ability
+                input type=checkbox name=attr_MeleeFavored value=1 spanspan
+                span class=abilityMeleespan
+                div class=dots
+                    input type=checkbox name=attr_Melee_max value=1 spanspan
+                    input type=radio name=attr_Melee value=0 checked=checked 
+                    input type=radio name=attr_Melee value=1 spanspan
+                    input type=radio name=attr_Melee value=2 spanspan
+                    input type=radio name=attr_Melee value=3 spanspan
+                    input type=radio name=attr_Melee value=4 spanspan
+                    input type=radio name=attr_Melee value=5 spanspan
+                div
+            div
+            div class=ability
+                input type=checkbox name=attr_ThrownFavored value=1 spanspan
+                span class=abilityThrownspan
+                div class=dots
+                    input type=checkbox name=attr_Thrown_max value=1 spanspan
+                    input type=radio name=attr_Thrown value=0 checked=checked 
+                    input type=radio name=attr_Thrown value=1 spanspan
+                    input type=radio name=attr_Thrown value=2 spanspan
+                    input type=radio name=attr_Thrown value=3 spanspan
+                    input type=radio name=attr_Thrown value=4 spanspan
+                    input type=radio name=attr_Thrown value=5 spanspan
+                div
+            div
+            div class=ability
+                input type=checkbox name=attr_WarFavored value=1 spanspan
+                span class=abilityWarspan
+                div class=dots
+                    input type=checkbox name=attr_War_max value=1 spanspan
+                    input type=radio name=attr_War value=0 checked=checked 
+                    input type=radio name=attr_War value=1 spanspan
+                    input type=radio name=attr_War value=2 spanspan
+                    input type=radio name=attr_War value=3 spanspan
+                    input type=radio name=attr_War value=4 spanspan
+                    input type=radio name=attr_War value=5 spanspan
+                div
+            div
+        div
+        
+        div class=sheet-col
+            h3 class=abilityZenithh3
+            div class=ability
+                input type=checkbox name=attr_IntegrityFavored value=1 spanspan
+                span class=abilityIntegrityspan
+                div class=dots
+                    input type=checkbox name=attr_Integrity_max value=1 spanspan
+                    input type=radio name=attr_Integrity value=0 checked=checked 
+                    input type=radio name=attr_Integrity value=1 spanspan
+                    input type=radio name=attr_Integrity value=2 spanspan
+                    input type=radio name=attr_Integrity value=3 spanspan
+                    input type=radio name=attr_Integrity value=4 spanspan
+                    input type=radio name=attr_Integrity value=5 spanspan
+                div
+            div
+            div class=ability
+                input type=checkbox name=attr_PerformanceFavored value=1 spanspan
+                span class=abilityPerformancespan
+                div class=dots
+                    input type=checkbox name=attr_Performance_max value=1 spanspan
+                    input type=radio name=attr_Performance value=0 checked=checked 
+                    input type=radio name=attr_Performance value=1 spanspan
+                    input type=radio name=attr_Performance value=2 spanspan
+                    input type=radio name=attr_Performance value=3 spanspan
+                    input type=radio name=attr_Performance value=4 spanspan
+                    input type=radio name=attr_Performance value=5 spanspan
+                div
+            div
+            div class=ability
+                input type=checkbox name=attr_PresenceFavored value=1 spanspan
+                span class=abilityPresencespan
+                div class=dots
+                    input type=checkbox name=attr_Presence_max value=1 spanspan
+                    input type=radio name=attr_Presence value=0 checked=checked 
+                    input type=radio name=attr_Presence value=1 spanspan
+                    input type=radio name=attr_Presence value=2 spanspan
+                    input type=radio name=attr_Presence value=3 spanspan
+                    input type=radio name=attr_Presence value=4 spanspan
+                    input type=radio name=attr_Presence value=5 spanspan
+                div
+            div
+            div class=ability
+                input type=checkbox name=attr_ResistanceFavored value=1 spanspan
+                span class=abilityResistancespan
+                div class=dots
+                    input type=checkbox name=attr_Resistance_max value=1 spanspan
+                    input type=radio name=attr_Resistance value=0 checked=checked 
+                    input type=radio name=attr_Resistance value=1 spanspan
+                    input type=radio name=attr_Resistance value=2 spanspan
+                    input type=radio name=attr_Resistance value=3 spanspan
+                    input type=radio name=attr_Resistance value=4 spanspan
+                    input type=radio name=attr_Resistance value=5 spanspan
+                div
+            div
+            div class=ability
+                input type=checkbox name=attr_SurvivalFavored value=1 spanspan
+                span class=abilitySurvivalspan
+                div class=dots
+                    input type=checkbox name=attr_Survival_max value=1 spanspan
+                    input type=radio name=attr_Survival value=0 checked=checked 
+                    input type=radio name=attr_Survival value=1 spanspan
+                    input type=radio name=attr_Survival value=2 spanspan
+                    input type=radio name=attr_Survival value=3 spanspan
+                    input type=radio name=attr_Survival value=4 spanspan
+                    input type=radio name=attr_Survival value=5 spanspan
+                div
+            div
+        div
+        
+        div class=sheet-col
+            h3 class=abilityTwilighth3
+            div class=ability craft-types
+                input type=checkbox name=attr_CraftFavored value=1 spanspan
+                span class=abilityCraftspan
+                ul class=craft-types
+                    li title=[Mundane] Making small, decorative, or high-precision items
+                        Air
+                        div class=dots
+                            input type=checkbox name=attr_CraftAir_max value=1 spanspan
+                            input type=radio name=attr_CraftAir value=0 checked=checked 
+                            input type=radio name=attr_CraftAir value=1 spanspan
+                            input type=radio name=attr_CraftAir value=2 spanspan
+                            input type=radio name=attr_CraftAir value=3 spanspan
+                            input type=radio name=attr_CraftAir value=4 spanspan
+                            input type=radio name=attr_CraftAir value=5 spanspan
+                        div
+                    li
+                    li title=[Mundane] Creating buildings and large objects with stone or earth
+                        Earth
+                        div class=dots
+                            input type=checkbox name=attr_CraftEarth_max value=1 spanspan
+                            input type=radio name=attr_CraftEarth value=0 checked=checked 
+                            input type=radio name=attr_CraftEarth value=1 spanspan
+                            input type=radio name=attr_CraftEarth value=2 spanspan
+                            input type=radio name=attr_CraftEarth value=3 spanspan
+                            input type=radio name=attr_CraftEarth value=4 spanspan
+                            input type=radio name=attr_CraftEarth value=5 spanspan
+                        div
+                    li
+                    li title=[Mundane] Forging and casting large metal objects and creating objects using fire
+                        Fire
+                        div class=dots
+                            input type=checkbox name=attr_CraftFire_max value=1 spanspan
+                            input type=radio name=attr_CraftFire value=0 checked=checked 
+                            input type=radio name=attr_CraftFire value=1 spanspan
+                            input type=radio name=attr_CraftFire value=2 spanspan
+                            input type=radio name=attr_CraftFire value=3 spanspan
+                            input type=radio name=attr_CraftFire value=4 spanspan
+                            input type=radio name=attr_CraftFire value=5 spanspan
+                        div
+                    li
+                    li title=[Mundane] Boiling and cooking plants, chemicals, and animal materials
+                        Water
+                        div class=dots
+                            input type=checkbox name=attr_CraftWater_max value=1 spanspan
+                            input type=radio name=attr_CraftWater value=0 checked=checked 
+                            input type=radio name=attr_CraftWater value=1 spanspan
+                            input type=radio name=attr_CraftWater value=2 spanspan
+                            input type=radio name=attr_CraftWater value=3 spanspan
+                            input type=radio name=attr_CraftWater value=4 spanspan
+                            input type=radio name=attr_CraftWater value=5 spanspan
+                        div
+                    li
+                    li title=[Mundane] Carving, weaving, and manipulating natural elements
+                        Wood
+                        div class=dots
+                            input type=checkbox name=attr_CraftWood_max value=1 spanspan
+                            input type=radio name=attr_CraftWood value=0 checked=checked 
+                            input type=radio name=attr_CraftWood value=1 spanspan
+                            input type=radio name=attr_CraftWood value=2 spanspan
+                            input type=radio name=attr_CraftWood value=3 spanspan
+                            input type=radio name=attr_CraftWood value=4 spanspan
+                            input type=radio name=attr_CraftWood value=5 spanspan
+                        div
+                    li
+                    li title=[Esoteric, Sidereal] Manipulate fate for certain Astrologies and Charms
+                        Fate
+                        div class=dots
+                            input type=checkbox name=attr_CraftFate_max value=1 spanspan
+                            input type=radio name=attr_CraftFate value=0 checked=checked 
+                            input type=radio name=attr_CraftFate value=1 spanspan
+                            input type=radio name=attr_CraftFate value=2 spanspan
+                            input type=radio name=attr_CraftFate value=3 spanspan
+                            input type=radio name=attr_CraftFate value=4 spanspan
+                            input type=radio name=attr_CraftFate value=5 spanspan
+                        div
+                    li
+                    li title=[Esoteric, First Age] Create or modify life
+                        Genesis
+                        div class=dots
+                            input type=checkbox name=attr_CraftGenesis_max value=1 spanspan
+                            input type=radio name=attr_CraftGenesis value=0 checked=checked 
+                            input type=radio name=attr_CraftGenesis value=1 spanspan
+                            input type=radio name=attr_CraftGenesis value=2 spanspan
+                            input type=radio name=attr_CraftGenesis value=3 spanspan
+                            input type=radio name=attr_CraftGenesis value=4 spanspan
+                            input type=radio name=attr_CraftGenesis value=5 spanspan
+                        div
+                    li
+                    li title=[Esoteric, Raksha] Manipulate the physical manifestation of shaping effects, from Essence to dreams
+                        Glamour
+                        div class=dots
+                            input type=checkbox name=attr_CraftGlamour_max value=1 spanspan
+                            input type=radio name=attr_CraftGlamour value=0 checked=checked 
+                            input type=radio name=attr_CraftGlamour value=1 spanspan
+                            input type=radio name=attr_CraftGlamour value=2 spanspan
+                            input type=radio name=attr_CraftGlamour value=3 spanspan
+                            input type=radio name=attr_CraftGlamour value=4 spanspan
+                            input type=radio name=attr_CraftGlamour value=5 spanspan
+                        div
+                    li
+                    li title=[Esoteric, First Age] Creation, enchantment, and maintenance of First Age devices
+                        Magitech
+                        div class=dots
+                            input type=checkbox name=attr_CraftMagitech_max value=1 spanspan
+                            input type=radio name=attr_CraftMagitech value=0 checked=checked 
+                            input type=radio name=attr_CraftMagitech value=1 spanspan
+                            input type=radio name=attr_CraftMagitech value=2 spanspan
+                            input type=radio name=attr_CraftMagitech value=3 spanspan
+                            input type=radio name=attr_CraftMagitech value=4 spanspan
+                            input type=radio name=attr_CraftMagitech value=5 spanspan
+                        div
+                    li
+					li title=[, ] 
+                        Necrotech
+                        div class=dots
+                            input type=checkbox name=attr_CraftNecrotech_max value=1 spanspan
+                            input type=radio name=attr_CraftNecrotech value=0 checked=checked 
+                            input type=radio name=attr_CraftNecrotech value=1 spanspan
+                            input type=radio name=attr_CraftNecrotech value=2 spanspan
+                            input type=radio name=attr_CraftNecrotech value=3 spanspan
+                            input type=radio name=attr_CraftNecrotech value=4 spanspan
+                            input type=radio name=attr_CraftNecrotech value=5 spanspan
+                        div
+                    li
+                    li title=[Esoteric, Infernal] Use Malfean Vitriol to catalyze a mundane Craft
+                        Vitriol
+                        div class=dots
+                            input type=checkbox name=attr_CraftVitriol_max value=1 spanspan
+                            input type=radio name=attr_CraftVitriol value=0 checked=checked 
+                            input type=radio name=attr_CraftVitriol value=1 spanspan
+                            input type=radio name=attr_CraftVitriol value=2 spanspan
+                            input type=radio name=attr_CraftVitriol value=3 spanspan
+                            input type=radio name=attr_CraftVitriol value=4 spanspan
+                            input type=radio name=attr_CraftVitriol value=5 spanspan
+                        div
+                    li
+                ul
+                div class=right style=padding-right 20px; font-style italicHover to select craftsdiv
+            div
+            div class=ability
+                input type=checkbox name=attr_InvestigationFavored value=1 spanspan
+                span class=abilityInvestigationspan
+                div class=dots
+                    input type=checkbox name=attr_Investigation_max value=1 spanspan
+                    input type=radio name=attr_Investigation value=0 checked=checked 
+                    input type=radio name=attr_Investigation value=1 spanspan
+                    input type=radio name=attr_Investigation value=2 spanspan
+                    input type=radio name=attr_Investigation value=3 spanspan
+                    input type=radio name=attr_Investigation value=4 spanspan
+                    input type=radio name=attr_Investigation value=5 spanspan
+                div
+            div
+            div class=ability
+                input type=checkbox name=attr_LoreFavored value=1 spanspan
+                span class=abilityLorespan
+                div class=dots
+                    input type=checkbox name=attr_Lore_max value=1 spanspan
+                    input type=radio name=attr_Lore value=0 checked=checked 
+                    input type=radio name=attr_Lore value=1 spanspan
+                    input type=radio name=attr_Lore value=2 spanspan
+                    input type=radio name=attr_Lore value=3 spanspan
+                    input type=radio name=attr_Lore value=4 spanspan
+                    input type=radio name=attr_Lore value=5 spanspan
+                div
+            div
+            div class=ability
+                input type=checkbox name=attr_MedicineFavored value=1 spanspan
+                span class=abilityMedicinespan
+                div class=dots
+                    input type=checkbox name=attr_Medicine_max value=1 spanspan
+                    input type=radio name=attr_Medicine value=0 checked=checked 
+                    input type=radio name=attr_Medicine value=1 spanspan
+                    input type=radio name=attr_Medicine value=2 spanspan
+                    input type=radio name=attr_Medicine value=3 spanspan
+                    input type=radio name=attr_Medicine value=4 spanspan
+                    input type=radio name=attr_Medicine value=5 spanspan
+                div
+            div
+            div class=ability
+                input type=checkbox name=attr_OccultFavored value=1 spanspan
+                span class=abilityOccultspan
+                div class=dots
+                    input type=checkbox name=attr_Occult_max value=1 spanspan
+                    input type=radio name=attr_Occult value=0 checked=checked 
+                    input type=radio name=attr_Occult value=1 spanspan
+                    input type=radio name=attr_Occult value=2 spanspan
+                    input type=radio name=attr_Occult value=3 spanspan
+                    input type=radio name=attr_Occult value=4 spanspan
+                    input type=radio name=attr_Occult value=5 spanspan
+                div
+            div
+        div
+    div
+    div class=sheet-3colrow
+        div class=sheet-col
+            h3 class=abilityNighth3
+            div class=ability
+                input type=checkbox name=attr_AthleticsFavored value=1 spanspan
+                span class=abilityAthleticsspan
+                div class=dots
+                    input type=checkbox name=attr_Athletics_max value=1 spanspan
+                    input type=radio name=attr_Athletics value=0 checked=checked 
+                    input type=radio name=attr_Athletics value=1 spanspan
+                    input type=radio name=attr_Athletics value=2 spanspan
+                    input type=radio name=attr_Athletics value=3 spanspan
+                    input type=radio name=attr_Athletics value=4 spanspan
+                    input type=radio name=attr_Athletics value=5 spanspan
+                div
+            div
+            div class=ability
+                input type=checkbox name=attr_AwarenessFavored value=1 spanspan
+                span class=abilityAwarenessspan
+                div class=dots
+                    input type=checkbox name=attr_Awareness_max value=1 spanspan
+                    input type=radio name=attr_Awareness value=0 checked=checked 
+                    input type=radio name=attr_Awareness value=1 spanspan
+                    input type=radio name=attr_Awareness value=2 spanspan
+                    input type=radio name=attr_Awareness value=3 spanspan
+                    input type=radio name=attr_Awareness value=4 spanspan
+                    input type=radio name=attr_Awareness value=5 spanspan
+                div
+            div
+            div class=ability
+                input type=checkbox name=attr_DodgeFavored value=1 spanspan
+                span class=abilityDodgespan
+                div class=dots
+                    input type=checkbox name=attr_Dodge_max value=1 spanspan
+                    input type=radio name=attr_Dodge value=0 checked=checked 
+                    input type=radio name=attr_Dodge value=1 spanspan
+                    input type=radio name=attr_Dodge value=2 spanspan
+                    input type=radio name=attr_Dodge value=3 spanspan
+                    input type=radio name=attr_Dodge value=4 spanspan
+                    input type=radio name=attr_Dodge value=5 spanspan
+                div
+            div
+            div class=ability
+                input type=checkbox name=attr_LarcenyFavored value=1 spanspan
+                span class=abilityLarcenyspan
+                div class=dots
+                    input type=checkbox name=attr_Larceny_max value=1 spanspan
+                    input type=radio name=attr_Larceny value=0 checked=checked 
+                    input type=radio name=attr_Larceny value=1 spanspan
+                    input type=radio name=attr_Larceny value=2 spanspan
+                    input type=radio name=attr_Larceny value=3 spanspan
+                    input type=radio name=attr_Larceny value=4 spanspan
+                    input type=radio name=attr_Larceny value=5 spanspan
+                div
+            div
+            div class=ability
+                input type=checkbox name=attr_StealthFavored value=1 spanspan
+                span class=abilityStealthspan
+                div class=dots
+                    input type=checkbox name=attr_Stealth_max value=1 spanspan
+                    input type=radio name=attr_Stealth value=0 checked=checked 
+                    input type=radio name=attr_Stealth value=1 spanspan
+                    input type=radio name=attr_Stealth value=2 spanspan
+                    input type=radio name=attr_Stealth value=3 spanspan
+                    input type=radio name=attr_Stealth value=4 spanspan
+                    input type=radio name=attr_Stealth value=5 spanspan
+                div
+            div
+        div
+        
+        div class=sheet-col
+            h3 class=abilityEclipseh3
+            div class=ability
+                input type=checkbox name=attr_BureaucracyFavored value=1 spanspan
+                span class=abilityBureaucracyspan
+                div class=dots
+                    input type=checkbox name=attr_Bureaucracy_max value=1 spanspan
+                    input type=radio name=attr_Bureaucracy value=0 checked=checked 
+                    input type=radio name=attr_Bureaucracy value=1 spanspan
+                    input type=radio name=attr_Bureaucracy value=2 spanspan
+                    input type=radio name=attr_Bureaucracy value=3 spanspan
+                    input type=radio name=attr_Bureaucracy value=4 spanspan
+                    input type=radio name=attr_Bureaucracy value=5 spanspan
+                div
+            div
+            div class=ability
+                input type=checkbox name=attr_LinguisticsFavored value=1 spanspan
+                span class=abilityLinguisticsspan
+                div class=dots
+                    input type=checkbox name=attr_Linguistics_max value=1 spanspan
+                    input type=radio name=attr_Linguistics value=0 checked=checked 
+                    input type=radio name=attr_Linguistics value=1 spanspan
+                    input type=radio name=attr_Linguistics value=2 spanspan
+                    input type=radio name=attr_Linguistics value=3 spanspan
+                    input type=radio name=attr_Linguistics value=4 spanspan
+                    input type=radio name=attr_Linguistics value=5 spanspan
+                div
+            div
+            div class=ability
+                input type=checkbox name=attr_RideFavored value=1 spanspan
+                span class=abilityRidespan
+                div class=dots
+                    input type=checkbox name=attr_Ride_max value=1 spanspan
+                    input type=radio name=attr_Ride value=0 checked=checked 
+                    input type=radio name=attr_Ride value=1 spanspan
+                    input type=radio name=attr_Ride value=2 spanspan
+                    input type=radio name=attr_Ride value=3 spanspan
+                    input type=radio name=attr_Ride value=4 spanspan
+                    input type=radio name=attr_Ride value=5 spanspan
+                div
+            div
+            div class=ability
+                input type=checkbox name=attr_SailFavored value=1 spanspan
+                span class=abilitySailspan
+                div class=dots
+                    input type=checkbox name=attr_Sail_max value=1 spanspan
+                    input type=radio name=attr_Sail value=0 checked=checked 
+                    input type=radio name=attr_Sail value=1 spanspan
+                    input type=radio name=attr_Sail value=2 spanspan
+                    input type=radio name=attr_Sail value=3 spanspan
+                    input type=radio name=attr_Sail value=4 spanspan
+                    input type=radio name=attr_Sail value=5 spanspan
+                div
+            div
+            div class=ability
+                input type=checkbox name=attr_SocializeFavored value=1 spanspan
+                span class=abilitySocializespan
+                div class=dots
+                    input type=checkbox name=attr_Socialize_max value=1 spanspan
+                    input type=radio name=attr_Socialize value=0 checked=checked 
+                    input type=radio name=attr_Socialize value=1 spanspan
+                    input type=radio name=attr_Socialize value=2 spanspan
+                    input type=radio name=attr_Socialize value=3 spanspan
+                    input type=radio name=attr_Socialize value=4 spanspan
+                    input type=radio name=attr_Socialize value=5 spanspan
+                div
+            div
+        div
+        
+        div class=sheet-col!-- Specialties are on a different page --div
+    div
+    
+    
+    div class=sheet-3colrow
+        div class=sheet-col
+            h1 class=separatorspanAnimaspanh1
+            textarea name=attr_AnimaLong class=four-linestextarea
+            h1 class=separatorspanLimit Breakspanh1
+            div class=dots center
+                input type=checkbox name=attr_Limit_Zero spanspan
+                input type=radio name=attr_Limit value=0 checked=checked 
+                input type=radio name=attr_Limit value=1 spanspan
+                input type=radio name=attr_Limit value=2 spanspan
+                input type=radio name=attr_Limit value=3 spanspan
+                input type=radio name=attr_Limit value=4 spanspan
+                input type=radio name=attr_Limit value=5 spanspan
+                input type=radio name=attr_Limit value=6 spanspan
+                input type=radio name=attr_Limit value=7 spanspan
+                input type=radio name=attr_Limit value=8 spanspan
+                input type=radio name=attr_Limit value=9 spanspan
+                input type=radio name=attr_Limit value=10 spanspan
+            div
+            h1 class=separatorspanVirtue Flawspanh1
+            textarea name=attr_VirtueFlaw class=three-linestextarea
+        div
+        div class=sheet-col
+            
+            div class=sheet-2colrow sheet-sub2colrow
+                div class=sheet-col
+                    h1 class=separatorspanWillpowerspanh1
+                    div class=dots center
+                        input type=radio name=attr_Willpower value=1 spanspan
+                        input type=radio name=attr_Willpower value=2 spanspan
+                        input type=radio name=attr_Willpower value=3 spanspan
+                        input type=radio name=attr_Willpower value=4 spanspan
+                        input type=radio name=attr_Willpower value=5 checked=checked spanspan
+                        input type=radio name=attr_Willpower value=6 spanspan
+                        input type=radio name=attr_Willpower value=7 spanspan
+                        input type=radio name=attr_Willpower value=8 spanspan
+                        input type=radio name=attr_Willpower value=9 spanspan
+                        input type=radio name=attr_Willpower value=10 spanspan
+                    div
+                    div class=will center
+                        input type=checkbox name=attr_TempWillpower1 value=1 spanspan
+                        input type=checkbox name=attr_TempWillpower2 value=1 spanspan
+                        input type=checkbox name=attr_TempWillpower3 value=1 spanspan
+                        input type=checkbox name=attr_TempWillpower4 value=1 spanspan
+                        input type=checkbox name=attr_TempWillpower5 value=1 spanspan
+                        input type=checkbox name=attr_TempWillpower6 value=1 spanspan
+                        input type=checkbox name=attr_TempWillpower7 value=1 spanspan
+                        input type=checkbox name=attr_TempWillpower8 value=1 spanspan
+                        input type=checkbox name=attr_TempWillpower9 value=1 spanspan
+                        input type=checkbox name=attr_TempWillpower10 value=1 spanspan
+                    div
+                    h1 class=separatorspanHealthspanh1
+                    h3 class=centerSoakh3
+                    label class=soakB input type=number name=attr_BashingSoak value=0 min=0 label
+                    label class=soakL input type=number name=attr_LethalSoak value=0 min=0 label
+                    label class=soakA input type=number name=attr_AggravatedSoak value=0 min=0 label
+                    h3 class=centerDodge Defenseh3
+                    input type=hidden name=attr_DodgeDVInitial disabled=true value=ceil((@{Dexterity}-abs(@{ArmorMobility})+@{Dodge}(1-@{Dodgemax})+@{Essence})2) 
+                    label class=dvDV input type=number name=attr_DodgeDVlabel
+                    label class=dvMDV input type=number name=attr_DodgeMDVlabel
+                    div style=width 80%; margin-left 10%
+                        hr 
+                        fieldset class=repeating_health
+                            div class=health
+                                select name=attr_WoundPenalty class=health-label
+                                    option value=-0-0option
+                                    option value=-1-1option
+                                    option value=-2-2option
+                                    option value=-4-4option
+                                select
+                                select name=attr_Damage class=health-value
+                                    option value=none☐ (no damage)option
+                                    option value=bashing&nbsp;∕ (bashing damage)option
+                                    option value=lethal☓ (lethal damage)option
+                                    option value=aggravated✱ (aggravated damage)option
+                                select
+                            div
+                        fieldset
+                        div class=health
+                            Incapacitated
+                            select name=attr_IncapacitatedDamage class=health-value
+                                option value=none☐ (no damage)option
+                                option value=bashing&nbsp;∕ (bashing damage)option
+                                option value=lethal☓ (lethal damage)option
+                                option value=aggravated✱ (aggravated damage)option
+                            select
+                        div
+                    div
+                div
+                div class=sheet-col
+                    h1 class=separatorspanVirtuesspanh1
+                    div class=virtue
+                        h4Compassionh4
+                        div class=dots
+                            input type=radio name=attr_Compassion value=1 checked=checked spanspan
+                            input type=radio name=attr_Compassion value=2 spanspan
+                            input type=radio name=attr_Compassion value=3 spanspan
+                            input type=radio name=attr_Compassion value=4 spanspan
+                            input type=radio name=attr_Compassion value=5 spanspan
+                        div
+                        div class=will
+                            input type=checkbox name=attr_TempCompassion1 value=1 spanspan
+                            input type=checkbox name=attr_TempCompassion2 value=1 spanspan
+                            input type=checkbox name=attr_TempCompassion3 value=1 spanspan
+                            input type=checkbox name=attr_TempCompassion4 value=1 spanspan
+                            input type=checkbox name=attr_TempCompassion5 value=1 spanspan
+                        div
+                    div
+                    div class=virtue
+                        h4Temperanceh4
+                        div class=dots
+                            input type=radio name=attr_Temperance value=1 checked=checked spanspan
+                            input type=radio name=attr_Temperance value=2 spanspan
+                            input type=radio name=attr_Temperance value=3 spanspan
+                            input type=radio name=attr_Temperance value=4 spanspan
+                            input type=radio name=attr_Temperance value=5 spanspan
+                        div
+                        div class=will
+                            input type=checkbox name=attr_TempTemperance1 value=1 spanspan
+                            input type=checkbox name=attr_TempTemperance2 value=1 spanspan
+                            input type=checkbox name=attr_TempTemperance3 value=1 spanspan
+                            input type=checkbox name=attr_TempTemperance4 value=1 spanspan
+                            input type=checkbox name=attr_TempTemperance5 value=1 spanspan
+                        div
+                    div
+                    div class=virtue
+                        h4Convictionh4
+                        div class=dots
+                            input type=radio name=attr_Conviction value=1 checked=checked spanspan
+                            input type=radio name=attr_Conviction value=2 spanspan
+                            input type=radio name=attr_Conviction value=3 spanspan
+                            input type=radio name=attr_Conviction value=4 spanspan
+                            input type=radio name=attr_Conviction value=5 spanspan
+                        div
+                        div class=will
+                            input type=checkbox name=attr_TempConviction1 value=1 spanspan
+                            input type=checkbox name=attr_TempConviction2 value=1 spanspan
+                            input type=checkbox name=attr_TempConviction3 value=1 spanspan
+                            input type=checkbox name=attr_TempConviction4 value=1 spanspan
+                            input type=checkbox name=attr_TempConviction5 value=1 spanspan
+                        div
+                    div
+                    div class=virtue
+                        h4Valorh4
+                        div class=dots
+                            input type=radio name=attr_Valor value=1 checked=checked spanspan
+                            input type=radio name=attr_Valor value=2 spanspan
+                            input type=radio name=attr_Valor value=3 spanspan
+                            input type=radio name=attr_Valor value=4 spanspan
+                            input type=radio name=attr_Valor value=5 spanspan
+                        div
+                        div class=will
+                            input type=checkbox name=attr_TempValor1 value=1 spanspan
+                            input type=checkbox name=attr_TempValor2 value=1 spanspan
+                            input type=checkbox name=attr_TempValor3 value=1 spanspan
+                            input type=checkbox name=attr_TempValor4 value=1 spanspan
+                            input type=checkbox name=attr_TempValor5 value=1 spanspan
+                        div
+                    div
+                    h1 class=separatorspanEssencespanh1
+                    div class=dots
+                        input type=radio name=attr_Essence value=1 checked=checked spanspan
+                        input type=radio name=attr_Essence value=2 spanspan
+                        input type=radio name=attr_Essence value=3 spanspan
+                        input type=radio name=attr_Essence value=4 spanspan
+                        input type=radio name=attr_Essence value=5 spanspan
+                        input type=radio name=attr_Essence value=6 spanspan
+                        input type=radio name=attr_Essence value=7 spanspan
+                        input type=radio name=attr_Essence value=8 spanspan
+                        input type=radio name=attr_Essence value=9 spanspan
+                        input type=radio name=attr_Essence value=10 spanspan
+                    div
+                    h1 class=separatorspanExperiencespanh1
+                    label class=essenceinput type=number name=attr_Experience value=0 label
+                div
+            div
+        div
+    div
+	
+	h1 class=separator vspacespanWeaponsspanh1
+    div class=combat-equipment
+        div class=weapons style=width 67%
+            
+            div class=vspacediv
+            span class=span-header center style=padding 0px; width 130pxWeapon  Attackspan
+            span class=span-header center style=padding 0px; width 49pxSpeedspan
+            span class=span-header center style=padding 0px; width 72pxAccuracyspan
+            span class=span-header center style=padding 0px; width 72pxDamagespan
+            span class=span-header center style=padding 0px; width 72pxDefensespan
+            span class=span-header center style=padding 0px; width 72pxRangespan
+            span class=span-header center style=padding 0px; width 72pxRatespan
+            fieldset class=repeating_attacks
+                div class=attack
+                    input type=text class=fancy style=width 134px name=attr_AttackName 
+                    input type=number class=fancy very-narrow style=width 50px; margin-left -4px name=attr_AttackSpeed min=3 value=6 
+                    input type=number class=fancy very-narrow style=width 73px; margin-left -4px name=attr_AttackAccuracy value=0 
+                    select name=attr_AttackDamageType class=fancy very-narrow style=width 73px; margin-left -4px
+                        option value=–option
+                        option value=BASHINGBashingoption
+                        option value=LETHALLethaloption
+                        option value=AGGRAVATEDAggravatedoption
+                    select
+                    input type=number class=fancy very-narrow style=width 73px; margin-left -4px name=attr_AttackDefense value=0 
+                    input type=number class=fancy very-narrow style=width 73px; margin-left -4px name=attr_AttackRange min=0 
+                    input type=number class=fancy very-narrow style=width 75px; margin-left -4px name=attr_AttackRate min=1 value=1 
+                div
+            fieldset
+        div
+    div
+	
+	h1 class=separatorspanArmorspanh1
+	div class=armor
+            labelType input type=text name=attr_ArmorType label
+            div style=margin-bottom 10px
+                label style=display inlineBashinglabel input type=number class=fancy name=attr_ArmorBashingSoak min=0 value=0 
+                label style=display inlinelabel
+                label style=display inlineLethallabel input type=number class=fancy name=ArmorLethalSoak min=0 value=0 
+            div
+            labelFatigue input type=number name=attr_ArmorFatigue min=0 value=0 label
+            labelMobility input type=number name=attr_ArmorMobility max=0 value=0 label
+            label style=display block
+                Descriptionbr 
+                textarea class=two-lines name=attr_ArmorDescriptiontextarea
+            label
+        div
+	
+	h1 class=separatorspanCharmsspanh1
+    span class=span-header style=width 310pxNamespan
+	span class=span-header style=width 100pxTypespan
+    span class=span-header style=width 120pxDurationspan
+    span class=span-header style=width 80pxCostspan
+    span class=span-headerEffectspan
+    fieldset class=repeating_charm
+        div class=sorcery
+            input type=text name=attr_CharmName 
+			input type=text name=attr_CharmType 
+            input type=text class=regular name=attr_CharmDuration 
+            input type=text class=narrow name=attr_CharmCost 
+            input type=text class=wide-flex name=attr_CharmEffect 
+        div
+    fieldset
+
+
+h1 class=separatorspanSorceryspanh1
+    span class=span-header style=width 310pxNamespan
+	span class=span-header style=width 120pxTypespan
+    span class=span-header style=width 120pxDurationspan
+    span class=span-header style=width 80pxCostspan
+    span class=span-headerEffectspan
+    fieldset class=repeating_sorcery
+        div class=sorcery
+            input type=text name=attr_SorceryName 
+				input type=text name=attr_SorceryType 
+            input type=text class=regular name=attr_SorceryDuration 
+            input type=text class=narrow name=attr_SorceryCost 
+            input type=text class=wide-flex name=attr_SorceryEffect 
+        div
+    fieldset
+    
+    h1 class=separatorspanArtifactsBackgroundsspanh1
+    span class=span-header style=width 193pxNamespan
+    span class=span-header style=width 77pxRatingspan
+    span class=span-headerEffectspan
+    fieldset class=repeating_artifacts
+        div class=artifacts
+            input type=text name=attr_ArtifactName 
+            select class=narrow name=attr_ArtifactRating
+                option value=1•option
+                option value=2••option
+                option value=3•••option
+                option value=4••••option
+                option value=5•••••option
+                option value=0NAoption
+            select
+            input type=text class=wide-flex name=attr_ArtifactEffect 
+        div
+    fieldset
+    
+	
+    h1 class=separatorspanHearthstonesspanh1
+    span class=span-header style=width 265pxNamespan
+    span class=span-header style=width 120pxAspectspan
+    span class=span-header style=width 80pxRatingspan
+    span class=span-header style=width 250pxEffectspan
+    span class=span-headerSocketedspan
+    fieldset class=repeating_hearthstones
+        div class=hearthstones
+            input type=text name=attr_HearthstoneName 
+            select class=regular name=attr_HearthstoneAspect
+                option value=AirAiroption
+                option value=EarthEarthoption
+                option value=FireFireoption
+                option value=WaterWateroption
+                option value=WoodWoodoption
+                option value=SolarSolaroption
+                option value=AbyssalAbyssaloption
+                option value=InfernalInfernaloption
+                option value=LunarLunaroption
+                option value=SiderealSiderealoption
+            select
+            select class=narrow name=attr_HearthstoneRating
+                option value=1•option
+                option value=2••option
+                option value=3•••option
+                option value=4••••option
+                option value=5•••••option
+                option value=0NAoption
+            select
+            input type=text class=wide-flex name=attr_HearthstoneEffect 
+            span style=width 100px; text-align center; margin-left -10pxinput type=checkbox style=margin-top -10px name=attr_HearthstoneSocketed value=1 spanspanspan
+        div
+    fieldset
+div
