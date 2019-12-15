@@ -670,6 +670,7 @@ div.sheet-attribute > input[type=checkbox]:first-child + span::before,
     display: none;
 }
 
+
 /* selectively shows Caste Abilities based on selected caste/subcaste */
 .sheet-caste-toggle[value="Dawn"] ~ div.sheet-solar-ab,
 .sheet-caste-toggle[value="Zenith"] ~ div.sheet-solar-ab,
@@ -694,8 +695,10 @@ div.sheet-attribute > input[type=checkbox]:first-child + span::before,
 .sheet-caste-toggle[value="Fire"] ~ div.sheet-dragon-ab,
 .sheet-caste-toggle[value="Water"] ~ div.sheet-dragon-ab,
 .sheet-caste-toggle[value="Wood"] ~ div.sheet-dragon-ab{
-    display: block;
+    display: block !important;
+
 }
+
 
 /* **************** */
 /*     Sheet dots   */
