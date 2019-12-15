@@ -132,6 +132,7 @@ div.sheet-attribute,
 div.sheet-ability,
 ul.sheet-craft-types li { clear: right; }
 
+
 .sheet-col .sheet-2colrow.sheet-sub2colrow { width: 841px; }
 
 .sheet-span2
@@ -704,7 +705,6 @@ div.sheet-attribute > input[type=checkbox]:first-child + span::before,
 /*     Sheet dots   */
 /* **************** */
 
-/* Hides all Castes in 'Abilities'-section by default*/
 }
 div.sheet-dots-drop {
     width: 160px;
@@ -715,14 +715,16 @@ div.sheet-dots-drop {
 select.sheet-dots-drop
 {
     width:100%; 
-    height:22px;
+    height:20px;
     font-weight: bold; 
-    font-size:20px;
+    font-size:18px;
     color:black;
-    padding: 0px 0px 0px 0px;
-	line-height:20px;
+    padding: 0px;
+	line-height:18px;
 	border:none;
 	-webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+    margin-top: -5px;
+    margin-bottom: -2px;
 }
