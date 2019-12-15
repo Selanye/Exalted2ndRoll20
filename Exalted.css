@@ -727,4 +727,8 @@ select.sheet-dots-drop
     appearance: none;
     margin-top: -5px;
     margin-bottom: -2px;
+    text-align:right; 
+    direction: rtl;
 }
+
+
