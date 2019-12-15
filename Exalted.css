@@ -700,15 +700,10 @@ div.sheet-attribute > input[type=checkbox]:first-child + span::before,
 
 }
 
-
-/* **************** */
 /*     Sheet dots   */
-/* **************** */
-
 }
 div.sheet-dots-drop {
     width: 160px;
-    text-align: right;
 }
 
 
@@ -727,8 +722,6 @@ select.sheet-dots-drop
     appearance: none;
     margin-top: -5px;
     margin-bottom: -2px;
-    text-align:right; 
-    direction: rtl;
 }
 
 
