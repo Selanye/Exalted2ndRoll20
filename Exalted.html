@@ -1427,12 +1427,13 @@
         <div class="sheet-col">
             <h3 class="center span2">Common Rolls</h3>
             <input type="hidden" disabled="true" name="attr_Null" value="0" />
-            <fieldset class="repeating_crafts">
+            
+            <fieldset class="repeating_CommonRollsRepeat">
             <div class="sheet-2colrow span2">
-                <div class="ability specialty">
-                    <input type="text" name="attr_CraftName" style="width:100px;height:24px;padding-top: 0px;padding-bottom: 1px;"/>
-                    <div>
-                        <select class="sheet-dots-drop" name="attr_CraftMisc">
+                <div class="commonrolls">
+                    <input class="coomonrollsinput" type="text" name="attr_RollName"/>
+                    <div class="commonrolls">
+                        <select class="commonrolls" name="attr_AttributesSelect">
                             <option value="attr_Null">None</option>
                             <option value="attr_Null">Other</option>
                             <option value="attr_Willpower">Willpower</option>
@@ -1458,8 +1459,8 @@
                         </select>
                     </div>
                     +
-                    <div>
-                        <select class="sheet-dots-drop" name="attr_AbilitySelect">
+                    <div class="commonrolls">
+                        <select class="commonrolls" name="attr_AbilitySelect">
                             <option value="attr_Null">None</option>
                             <option value="attr_Null">Other</option>
                             <option value="attr_Willpower">Willpower</option>
@@ -1504,11 +1505,11 @@
     					</select>
                     </div>
                     +
-                    <div>
-                        Number
+                    <div class="commonrolls">
+                        <input class="coomonrollsnumber coomonrollsinput" type="text" name="attr_RollBonus"/>
                     </div>
-                    <div>
-                        [Roll Button]
+                    <div class="commonrolls">
+                        [Roll]
                     </div>
                 </div>
             </div>
