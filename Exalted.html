@@ -1406,19 +1406,20 @@
             <h1 class="separator"><span>Anima</span></h1>
             <textarea name="attr_AnimaLong" class="four-lines"></textarea>
             <h1 class="separator"><span>Limit Break</span></h1>
-            <div class="dots center">
-                <input type="checkbox" name="attr_Limit_Zero" /><span></span>
-                <input type="radio" name="attr_Limit" value="0" checked="checked" />
-                <input type="radio" name="attr_Limit" value="1" /><span></span>
-                <input type="radio" name="attr_Limit" value="2" /><span></span>
-                <input type="radio" name="attr_Limit" value="3" /><span></span>
-                <input type="radio" name="attr_Limit" value="4" /><span></span>
-                <input type="radio" name="attr_Limit" value="5" /><span></span>
-                <input type="radio" name="attr_Limit" value="6" /><span></span>
-                <input type="radio" name="attr_Limit" value="7" /><span></span>
-                <input type="radio" name="attr_Limit" value="8" /><span></span>
-                <input type="radio" name="attr_Limit" value="9" /><span></span>
-                <input type="radio" name="attr_Limit" value="10" /><span></span>
+            <div class="dots-drop-tendots">
+				<select class="dots-drop-tendots" name="attr_Limet">
+				    <option value="0" select>&#9898;&#9898;&#9898;&#9898;&#9898; &#9898;&#9898;&#9898;&#9898;&#9898;</option>
+                    <option value="1">&#9899;&#9898;&#9898;&#9898;&#9898; &#9898;&#9898;&#9898;&#9898;&#9898;</option>
+                    <option value="2">&#9899;&#9899;&#9898;&#9898;&#9898; &#9898;&#9898;&#9898;&#9898;&#9898;</option>
+                    <option value="3">&#9899;&#9899;&#9899;&#9898;&#9898; &#9898;&#9898;&#9898;&#9898;&#9898;</option>
+                    <option value="4">&#9899;&#9899;&#9899;&#9899;&#9898; &#9898;&#9898;&#9898;&#9898;&#9898;</option>
+                    <option value="5">&#9899;&#9899;&#9899;&#9899;&#9899; &#9898;&#9898;&#9898;&#9898;&#9898;</option>
+                    <option value="6">&#9899;&#9899;&#9899;&#9899;&#9899; &#9899;&#9898;&#9898;&#9898;&#9898;</option>
+                    <option value="7">&#9899;&#9899;&#9899;&#9899;&#9899; &#9899;&#9899;&#9898;&#9898;&#9898;</option>
+                    <option value="8">&#9899;&#9899;&#9899;&#9899;&#9899; &#9899;&#9899;&#9899;&#9898;&#9898;</option>
+                    <option value="9">&#9899;&#9899;&#9899;&#9899;&#9899; &#9899;&#9899;&#9899;&#9899;&#9898;</option>
+                    <option value="10">&#9899;&#9899;&#9899;&#9899;&#9899; &#9899;&#9899;&#9899;&#9899;&#9899;</option>
+				</select>
             </div>
             <h1 class="separator"><span>Virtue Flaw</span></h1>
             <textarea name="attr_VirtueFlaw" class="three-lines"></textarea>
@@ -1505,7 +1506,7 @@
                     </div>
                     +
                     <div class="commonrolls">
-                        <input class="coomonrollsnumber coomonrollsinput" type="text" name="attr_RollBonus"/>
+                        <input class="coomonrollsnumber coomonrollsinput" type="text" name="attr_RollBonus" value="0"/>
                     </div>
                     <div class="commonrolls">
                         <button type='roll' value='/roll (@{AttributesSelect} + @{AbilitySelect} + @{RollBonus})d10s>7 @{RollName}' name='roll_commonrollbutton'></button>
@@ -1516,6 +1517,36 @@
             <div class="sheet-2colrow sheet-sub2colrow">
                 <div class="sheet-col">
                     <h1 class="separator"><span>Willpower</span></h1>
+                    <div class="dots-drop-tendots">
+        				<select class="dots-drop-tendots" name="attr_Willpower" value="5">
+        				    <option value="0" select>&#9898;&#9898;&#9898;&#9898;&#9898; &#9898;&#9898;&#9898;&#9898;&#9898;</option>
+                            <option value="1">&#9899;&#9898;&#9898;&#9898;&#9898; &#9898;&#9898;&#9898;&#9898;&#9898;</option>
+                            <option value="2">&#9899;&#9899;&#9898;&#9898;&#9898; &#9898;&#9898;&#9898;&#9898;&#9898;</option>
+                            <option value="3">&#9899;&#9899;&#9899;&#9898;&#9898; &#9898;&#9898;&#9898;&#9898;&#9898;</option>
+                            <option value="4">&#9899;&#9899;&#9899;&#9899;&#9898; &#9898;&#9898;&#9898;&#9898;&#9898;</option>
+                            <option value="5">&#9899;&#9899;&#9899;&#9899;&#9899; &#9898;&#9898;&#9898;&#9898;&#9898;</option>
+                            <option value="6">&#9899;&#9899;&#9899;&#9899;&#9899; &#9899;&#9898;&#9898;&#9898;&#9898;</option>
+                            <option value="7">&#9899;&#9899;&#9899;&#9899;&#9899; &#9899;&#9899;&#9898;&#9898;&#9898;</option>
+                            <option value="8">&#9899;&#9899;&#9899;&#9899;&#9899; &#9899;&#9899;&#9899;&#9898;&#9898;</option>
+                            <option value="9">&#9899;&#9899;&#9899;&#9899;&#9899; &#9899;&#9899;&#9899;&#9899;&#9898;</option>
+                            <option value="10">&#9899;&#9899;&#9899;&#9899;&#9899; &#9899;&#9899;&#9899;&#9899;&#9899;</option>
+        				</select>
+                    </div>
+                    <div class="dots-drop-tendots">
+        				<select class="dots-drop-tendots" name="attr_TempWillpower">
+        				    <option value="0" select>&#9744;&#9744;&#9744;&#9744;&#9744; &#9744;&#9744;&#9744;&#9744;&#9744;</option>
+                            <option value="1">&#9745;&#9744;&#9744;&#9744;&#9744; &#9744;&#9744;&#9744;&#9744;&#9744;</option>
+                            <option value="2">&#9745;&#9745;&#9744;&#9744;&#9744; &#9744;&#9744;&#9744;&#9744;&#9744;</option>
+                            <option value="3">&#9745;&#9745;&#9745;&#9744;&#9744; &#9744;&#9744;&#9744;&#9744;&#9744;</option>
+                            <option value="4">&#9745;&#9745;&#9745;&#9745;&#9744; &#9744;&#9744;&#9744;&#9744;&#9744;</option>
+                            <option value="5">&#9745;&#9745;&#9745;&#9745;&#9745; &#9744;&#9744;&#9744;&#9744;&#9744;</option>
+                            <option value="6">&#9745;&#9745;&#9745;&#9745;&#9745; &#9745;&#9744;&#9744;&#9744;&#9744;</option>
+                            <option value="7">&#9745;&#9745;&#9745;&#9745;&#9745; &#9745;&#9745;&#9744;&#9744;&#9744;</option>
+                            <option value="8">&#9745;&#9745;&#9745;&#9745;&#9745; &#9745;&#9745;&#9745;&#9744;&#9744;</option>
+                            <option value="9">&#9745;&#9745;&#9745;&#9745;&#9745; &#9745;&#9745;&#9745;&#9745;&#9744;</option>
+                            <option value="10">&#9745;&#9745;&#9745;&#9745;&#9745; &#9745;&#9745;&#9745;&#9745;&#9745;</option>
+        				</select>
+                    </div>
                     <div class="dots center">
                         <input type="radio" name="attr_Willpower" value="1" /><span></span>
                         <input type="radio" name="attr_Willpower" value="2" /><span></span>
@@ -1649,20 +1680,23 @@
                         </div>
                     </div>
                     <h1 class="separator"><span>Essence</span></h1>
-                    <div class="dots">
-                        <input type="radio" name="attr_Essence" value="1" checked="checked" /><span></span>
-                        <input type="radio" name="attr_Essence" value="2" /><span></span>
-                        <input type="radio" name="attr_Essence" value="3" /><span></span>
-                        <input type="radio" name="attr_Essence" value="4" /><span></span>
-                        <input type="radio" name="attr_Essence" value="5" /><span></span>
-                        <input type="radio" name="attr_Essence" value="6" /><span></span>
-                        <input type="radio" name="attr_Essence" value="7" /><span></span>
-                        <input type="radio" name="attr_Essence" value="8" /><span></span>
-                        <input type="radio" name="attr_Essence" value="9" /><span></span>
-                        <input type="radio" name="attr_Essence" value="10" /><span></span>
+                    <div class="dots-drop-tendots">
+        				<select class="dots-drop-tendots" name="attr_Essence">
+        				    <option value="0" select>&#9898;&#9898;&#9898;&#9898;&#9898; &#9898;&#9898;&#9898;&#9898;&#9898;</option>
+                            <option value="1">&#9899;&#9898;&#9898;&#9898;&#9898; &#9898;&#9898;&#9898;&#9898;&#9898;</option>
+                            <option value="2">&#9899;&#9899;&#9898;&#9898;&#9898; &#9898;&#9898;&#9898;&#9898;&#9898;</option>
+                            <option value="3">&#9899;&#9899;&#9899;&#9898;&#9898; &#9898;&#9898;&#9898;&#9898;&#9898;</option>
+                            <option value="4">&#9899;&#9899;&#9899;&#9899;&#9898; &#9898;&#9898;&#9898;&#9898;&#9898;</option>
+                            <option value="5">&#9899;&#9899;&#9899;&#9899;&#9899; &#9898;&#9898;&#9898;&#9898;&#9898;</option>
+                            <option value="6">&#9899;&#9899;&#9899;&#9899;&#9899; &#9899;&#9898;&#9898;&#9898;&#9898;</option>
+                            <option value="7">&#9899;&#9899;&#9899;&#9899;&#9899; &#9899;&#9899;&#9898;&#9898;&#9898;</option>
+                            <option value="8">&#9899;&#9899;&#9899;&#9899;&#9899; &#9899;&#9899;&#9899;&#9898;&#9898;</option>
+                            <option value="9">&#9899;&#9899;&#9899;&#9899;&#9899; &#9899;&#9899;&#9899;&#9899;&#9898;</option>
+                            <option value="10">&#9899;&#9899;&#9899;&#9899;&#9899; &#9899;&#9899;&#9899;&#9899;&#9899;</option>
+        				</select>
                     </div>
                     <h1 class="separator"><span>Experience</span></h1>
-                    <label class="essence"><input type="number" name="attr_Experience" value="0" /></label>
+                    <label class="essence">Total:<input type="number" name="attr_Experience" value="0" />/<input type="number" name="attr_Experience_spent" value="0" /></label>
                 </div>
             </div>
         </div>
