@@ -421,6 +421,35 @@ label.sheet-soak input:focus,
     padding-right: 0;
 }
 
+/* Virtues */
+
+.sheet-virtues {
+    text-align: center;
+}
+
+table.sheet-virtues {
+    text-align: center;
+    width: 100%;
+}
+
+select.sheet-virtues
+{
+    width:70%; 
+    height:20px;
+    font-weight: bold; 
+    font-size:18px;
+    color:black;
+    padding: 0px;
+	line-height:18px;
+	border:none;
+	-webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin-top: -5px;
+    margin-bottom: -2px;
+
+}
+
 /* Common Rolls  */
 
 .sheet-commonrolls
@@ -722,7 +751,6 @@ input[type=radio]:not(.sheet-tab):checked ~ input[type=radio] + span::before,
 
 span.sheet-attribute + div,
 span.sheet-ability + div,
-.sheet-virtue,
 [data-groupname=repeating_intimacies] .repitem,
 .sheet-combat-equipment .sheet-armor { display: inline-block; }
 

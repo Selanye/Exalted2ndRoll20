@@ -49,7 +49,7 @@
 <input type="radio" class="tab" name="attr_tab" value="magic" /><span title="Magic"></span>
 <input type="radio" class="tab" name="attr_tab" value="background" /><span title="Background"></span>
 
-
+<!--Main Tab -->
 
 <div class="tab-content statistics-tab">
     <h1 class="separator"><span>Attributes</span></h1>
@@ -1587,74 +1587,105 @@
                 </div>
                 <div class="sheet-col">
                     <h1 class="separator"><span>Virtues</span></h1>
-                    <div class="virtue">
-                        <h4>Compassion</h4>
-                        <div class="dots">
-                            <input type="radio" name="attr_Compassion" value="1" checked="checked" /><span></span>
-                            <input type="radio" name="attr_Compassion" value="2" /><span></span>
-                            <input type="radio" name="attr_Compassion" value="3" /><span></span>
-                            <input type="radio" name="attr_Compassion" value="4" /><span></span>
-                            <input type="radio" name="attr_Compassion" value="5" /><span></span>
-                        </div>
-                        <div class="will">
-                            <input type="checkbox" name="attr_TempCompassion1" value="1" /><span></span>
-                            <input type="checkbox" name="attr_TempCompassion2" value="1" /><span></span>
-                            <input type="checkbox" name="attr_TempCompassion3" value="1" /><span></span>
-                            <input type="checkbox" name="attr_TempCompassion4" value="1" /><span></span>
-                            <input type="checkbox" name="attr_TempCompassion5" value="1" /><span></span>
-                        </div>
-                    </div>
-                    <div class="virtue">
-                        <h4>Temperance</h4>
-                        <div class="dots">
-                            <input type="radio" name="attr_Temperance" value="1" checked="checked" /><span></span>
-                            <input type="radio" name="attr_Temperance" value="2" /><span></span>
-                            <input type="radio" name="attr_Temperance" value="3" /><span></span>
-                            <input type="radio" name="attr_Temperance" value="4" /><span></span>
-                            <input type="radio" name="attr_Temperance" value="5" /><span></span>
-                        </div>
-                        <div class="will">
-                            <input type="checkbox" name="attr_TempTemperance1" value="1" /><span></span>
-                            <input type="checkbox" name="attr_TempTemperance2" value="1" /><span></span>
-                            <input type="checkbox" name="attr_TempTemperance3" value="1" /><span></span>
-                            <input type="checkbox" name="attr_TempTemperance4" value="1" /><span></span>
-                            <input type="checkbox" name="attr_TempTemperance5" value="1" /><span></span>
-                        </div>
-                    </div>
-                    <div class="virtue">
-                        <h4>Conviction</h4>
-                        <div class="dots">
-                            <input type="radio" name="attr_Conviction" value="1" checked="checked" /><span></span>
-                            <input type="radio" name="attr_Conviction" value="2" /><span></span>
-                            <input type="radio" name="attr_Conviction" value="3" /><span></span>
-                            <input type="radio" name="attr_Conviction" value="4" /><span></span>
-                            <input type="radio" name="attr_Conviction" value="5" /><span></span>
-                        </div>
-                        <div class="will">
-                            <input type="checkbox" name="attr_TempConviction1" value="1" /><span></span>
-                            <input type="checkbox" name="attr_TempConviction2" value="1" /><span></span>
-                            <input type="checkbox" name="attr_TempConviction3" value="1" /><span></span>
-                            <input type="checkbox" name="attr_TempConviction4" value="1" /><span></span>
-                            <input type="checkbox" name="attr_TempConviction5" value="1" /><span></span>
-                        </div>
-                    </div>
-                    <div class="virtue">
-                        <h4>Valor</h4>
-                        <div class="dots">
-                            <input type="radio" name="attr_Valor" value="1" checked="checked" /><span></span>
-                            <input type="radio" name="attr_Valor" value="2" /><span></span>
-                            <input type="radio" name="attr_Valor" value="3" /><span></span>
-                            <input type="radio" name="attr_Valor" value="4" /><span></span>
-                            <input type="radio" name="attr_Valor" value="5" /><span></span>
-                        </div>
-                        <div class="will">
-                            <input type="checkbox" name="attr_TempValor1" value="1" /><span></span>
-                            <input type="checkbox" name="attr_TempValor2" value="1" /><span></span>
-                            <input type="checkbox" name="attr_TempValor3" value="1" /><span></span>
-                            <input type="checkbox" name="attr_TempValor4" value="1" /><span></span>
-                            <input type="checkbox" name="attr_TempValor5" value="1" /><span></span>
-                        </div>
-                    </div>
+                    <table class="virtues">
+                        <tr>
+                            <td>
+                                <h4>Compassion</h4>
+                                <div>
+                				<select class="virtues" name="attr_Compassion" value="1">
+                				    <option value="0" select>&#9898;&#9898;&#9898;&#9898;&#9898;</option>
+                                    <option value="1">&#9899;&#9898;&#9898;&#9898;&#9898;</option>
+                                    <option value="2">&#9899;&#9899;&#9898;&#9898;&#9898;</option>
+                                    <option value="3">&#9899;&#9899;&#9899;&#9898;&#9898;</option>
+                                    <option value="4">&#9899;&#9899;&#9899;&#9899;&#9898;</option>
+                                    <option value="5">&#9899;&#9899;&#9899;&#9899;&#9899;</option>
+                				</select>
+                                </div>
+                                <div>
+                    				<select class="virtues" name="attr_TempCompassion">
+                    				    <option value="0" select>&#9744;&#9744;&#9744;&#9744;&#9744;</option>
+                                        <option value="1">&#9745;&#9744;&#9744;&#9744;&#9744;</option>
+                                        <option value="2">&#9745;&#9745;&#9744;&#9744;&#9744;</option>
+                                        <option value="3">&#9745;&#9745;&#9745;&#9744;&#9744;</option>
+                                        <option value="4">&#9745;&#9745;&#9745;&#9745;&#9744;</option>
+                                        <option value="5">&#9745;&#9745;&#9745;&#9745;&#9745;</option>
+                    				</select>
+                                </div>
+                            </td>
+                                
+                            <td>
+                                <h4>Temperance</h4>
+                                <div>
+                				<select class="virtues" name="attr_Temperance" value="1">
+                				    <option value="0" select>&#9898;&#9898;&#9898;&#9898;&#9898;</option>
+                                    <option value="1">&#9899;&#9898;&#9898;&#9898;&#9898;</option>
+                                    <option value="2">&#9899;&#9899;&#9898;&#9898;&#9898;</option>
+                                    <option value="3">&#9899;&#9899;&#9899;&#9898;&#9898;</option>
+                                    <option value="4">&#9899;&#9899;&#9899;&#9899;&#9898;</option>
+                                    <option value="5">&#9899;&#9899;&#9899;&#9899;&#9899;</option>
+                				</select>
+                                </div>
+                                <div>
+                    				<select class="virtues" name="attr_TempTemperance">
+                    				    <option value="0" select>&#9744;&#9744;&#9744;&#9744;&#9744;</option>
+                                        <option value="1">&#9745;&#9744;&#9744;&#9744;&#9744;</option>
+                                        <option value="2">&#9745;&#9745;&#9744;&#9744;&#9744;</option>
+                                        <option value="3">&#9745;&#9745;&#9745;&#9744;&#9744;</option>
+                                        <option value="4">&#9745;&#9745;&#9745;&#9745;&#9744;</option>
+                                        <option value="5">&#9745;&#9745;&#9745;&#9745;&#9745;</option>
+                    				</select>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h4>Conviction</h4>
+                                <div>
+                				<select class="virtues" name="attr_Conviction" value="1">
+                				    <option value="0" select>&#9898;&#9898;&#9898;&#9898;&#9898;</option>
+                                    <option value="1">&#9899;&#9898;&#9898;&#9898;&#9898;</option>
+                                    <option value="2">&#9899;&#9899;&#9898;&#9898;&#9898;</option>
+                                    <option value="3">&#9899;&#9899;&#9899;&#9898;&#9898;</option>
+                                    <option value="4">&#9899;&#9899;&#9899;&#9899;&#9898;</option>
+                                    <option value="5">&#9899;&#9899;&#9899;&#9899;&#9899;</option>
+                				</select>
+                                </div>
+                                <div>
+                    				<select class="virtues" name="attr_TempConviction">
+                    				    <option value="0" select>&#9744;&#9744;&#9744;&#9744;&#9744;</option>
+                                        <option value="1">&#9745;&#9744;&#9744;&#9744;&#9744;</option>
+                                        <option value="2">&#9745;&#9745;&#9744;&#9744;&#9744;</option>
+                                        <option value="3">&#9745;&#9745;&#9745;&#9744;&#9744;</option>
+                                        <option value="4">&#9745;&#9745;&#9745;&#9745;&#9744;</option>
+                                        <option value="5">&#9745;&#9745;&#9745;&#9745;&#9745;</option>
+                    				</select>
+                                </div>
+                            </td>
+                            <td>
+                                <h4>Valor</h4>
+                                <div>
+                				<select class="virtues" name="attr_Valor" value="1">
+                				    <option value="0" select>&#9898;&#9898;&#9898;&#9898;&#9898;</option>
+                                    <option value="1">&#9899;&#9898;&#9898;&#9898;&#9898;</option>
+                                    <option value="2">&#9899;&#9899;&#9898;&#9898;&#9898;</option>
+                                    <option value="3">&#9899;&#9899;&#9899;&#9898;&#9898;</option>
+                                    <option value="4">&#9899;&#9899;&#9899;&#9899;&#9898;</option>
+                                    <option value="5">&#9899;&#9899;&#9899;&#9899;&#9899;</option>
+                				</select>
+                                </div>
+                                <div>
+                    				<select class="virtues" name="attr_TempWillpower">
+                    				    <option value="0" select>&#9744;&#9744;&#9744;&#9744;&#9744;</option>
+                                        <option value="1">&#9745;&#9744;&#9744;&#9744;&#9744;</option>
+                                        <option value="2">&#9745;&#9745;&#9744;&#9744;&#9744;</option>
+                                        <option value="3">&#9745;&#9745;&#9745;&#9744;&#9744;</option>
+                                        <option value="4">&#9745;&#9745;&#9745;&#9745;&#9744;</option>
+                                        <option value="5">&#9745;&#9745;&#9745;&#9745;&#9745;</option>
+                    				</select>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
                     <h1 class="separator"><span>Essence</span></h1>
                     <div class="dots-drop-tendots">
         				<select class="dots-drop-tendots" name="attr_Essence">
@@ -1678,7 +1709,7 @@
         </div>
     </div>
 </div>
-
+<!--Combat Tab -->
 <div class="tab-content combat-tab">
     <div class="sheet-2colrow">
         <div class="sheet-col">
@@ -1941,7 +1972,7 @@
         </div>
     </div>
 </div>
-
+<!--Magic Tab -->
 <div class="tab-content magic-tab">
     <h1 class="separator"><span>Sorcery</span></h1>
     <span class="span-header" style="width: 310px">Name</span>
@@ -2010,7 +2041,7 @@
         </div>
     </fieldset>
 </div>
-
+<!--Background Tab -->
 <div class="tab-content background-tab">
     <div class="sheet-2colrow">
         <div class="sheet-col">
@@ -2453,8 +2484,9 @@
 
 
 
+<!--Worker Scripts -->
 
-
+<!--Roll Templates -->
 
 
 <rolltemplate class="sheet-rolltemplate-joinbattle">
